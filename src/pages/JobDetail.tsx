@@ -34,7 +34,7 @@ const JobDetail = () => {
     // Fetch job data from JSON file
     const fetchJobData = async () => {
       try {
-        const response = await fetch('/src/data/jobs.json');
+        const response = await fetch('/data/jobs.json');
         const data = await response.json();
         const foundJob = data.jobs.find(j => j.id.toString() === jobId);
         setJob(foundJob);
