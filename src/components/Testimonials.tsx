@@ -1,5 +1,6 @@
 
 import React, { useRef } from "react";
+// import testimonialsIllustration from "@/assets/testimonials.webp";
 
 interface TestimonialProps {
   content: string;
@@ -61,14 +62,25 @@ const Testimonials = () => {
 
   return <section className="py-12 bg-white relative" id="testimonials" ref={sectionRef}> {/* Reduced from py-20 */}
       <div className="section-container opacity-0 animate-on-scroll">
-        <div className="flex items-center gap-4 mb-6">
-          <div className="job-chip">
-            <span className="inline-flex items-center justify-center w-5 h-5 rounded-full bg-pulse-500 text-white mr-2">05</span>
-            <span>Success Stories</span>
+        <div className="grid lg:grid-cols-2 gap-12 items-center mb-12">
+          <div>
+            <div className="flex items-center gap-4 mb-6">
+              <div className="job-chip">
+                <span className="inline-flex items-center justify-center w-5 h-5 rounded-full bg-pulse-500 text-white mr-2">05</span>
+                <span>Success Stories</span>
+              </div>
+            </div>
+            
+            <h2 className="text-5xl font-display font-bold mb-6 text-left">Success Stories</h2>
+          </div>
+          <div className="hidden lg:block">
+            <img 
+              src="/assets/testimonials.webp"
+              alt="Success stories illustration" 
+              className="w-full h-auto max-w-md mx-auto"
+            />
           </div>
         </div>
-        
-        <h2 className="text-5xl font-display font-bold mb-12 text-left">Success Stories</h2>
         
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {testimonials.map((testimonial, index) => <TestimonialCard key={index} content={testimonial.content} author={testimonial.author} role={testimonial.role} gradient={testimonial.gradient} backgroundImage={testimonial.backgroundImage} />)}

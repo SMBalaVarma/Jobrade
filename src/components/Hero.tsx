@@ -2,6 +2,7 @@
 import React, { useEffect, useRef, useState } from "react";
 import { cn } from "@/lib/utils";
 import { Search, MapPin, Briefcase } from "lucide-react";
+import heroIllustration from "/assets/hero-illustration.webp";
 
 const Hero = () => {
   const [searchKeyword, setSearchKeyword] = useState("");
@@ -34,6 +35,15 @@ const Hero = () => {
       }}
     >
       <div className="absolute -top-[10%] -right-[5%] w-1/2 h-[70%] bg-pulse-gradient opacity-20 blur-3xl rounded-full"></div>
+      
+      {/* Hero illustration */}
+      <div className="absolute top-1/2 right-10 transform -translate-y-1/2 hidden lg:block opacity-80">
+        <img 
+          src={heroIllustration} 
+          alt="Professional job search illustration" 
+          className="w-96 h-72 object-contain"
+        />
+      </div>
       
       <div className="container px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
         <div className="text-center mb-8 sm:mb-12">

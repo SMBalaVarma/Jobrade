@@ -1,11 +1,18 @@
 import React from "react";
 import { ArrowRight, Star, Users, MapPin } from "lucide-react";
+import companyShowcase from "/assets/company-showcase.webp";
+import techCorpLogo from "/assets/logos/techcorp-logo.webp";
+import innovateCoLogo from "/assets/logos/innovateco-logo.webp";
+import designStudioLogo from "/assets/logos/designstudio-logo.webp";
+import dataFlowLogo from "/assets/logos/dataflow-logo.webp";
+import growthLabsLogo from "/assets/logos/growthlabs-logo.webp";
+import cloudTechLogo from "/assets/logos/cloudtech-logo.webp";
 
 const CompanyShowcase = () => {
   const companies = [
     {
       name: "TechCorp",
-      logo: "🏢",
+      logo: techCorpLogo,
       description: "Leading technology company focused on innovation and cutting-edge solutions.",
       rating: 4.8,
       employees: "10,000+",
@@ -16,7 +23,7 @@ const CompanyShowcase = () => {
     },
     {
       name: "InnovateCo",
-      logo: "🚀",
+      logo: innovateCoLogo,
       description: "Fast-growing startup revolutionizing the way people work and collaborate.",
       rating: 4.6,
       employees: "500-1000",
@@ -27,7 +34,7 @@ const CompanyShowcase = () => {
     },
     {
       name: "DesignStudio",
-      logo: "🎨",
+      logo: designStudioLogo,
       description: "Creative agency specializing in digital experiences and brand design.",
       rating: 4.7,
       employees: "50-100",
@@ -38,7 +45,7 @@ const CompanyShowcase = () => {
     },
     {
       name: "DataFlow",
-      logo: "📊",
+      logo: dataFlowLogo,
       description: "Data analytics platform helping businesses make data-driven decisions.",
       rating: 4.9,
       employees: "200-500",
@@ -49,7 +56,7 @@ const CompanyShowcase = () => {
     },
     {
       name: "GrowthLabs",
-      logo: "📈",
+      logo: growthLabsLogo,
       description: "Marketing technology company focused on helping businesses scale.",
       rating: 4.5,
       employees: "100-200",
@@ -60,7 +67,7 @@ const CompanyShowcase = () => {
     },
     {
       name: "CloudTech",
-      logo: "☁️",
+      logo: cloudTechLogo,
       description: "Cloud infrastructure provider serving enterprise clients worldwide.",
       rating: 4.8,
       employees: "1000-5000",
@@ -75,17 +82,26 @@ const CompanyShowcase = () => {
     <section className="py-12 sm:py-16 bg-gray-50" id="company-showcase">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-8 sm:mb-12">
-            <div className="job-chip mx-auto mb-4">
-              <span className="inline-flex items-center justify-center w-5 h-5 rounded-full bg-pulse-500 text-white mr-2">04</span>
-              <span>Top Companies</span>
+          <div className="grid lg:grid-cols-2 gap-12 items-center mb-8 sm:mb-12">
+            <div className="text-center lg:text-left">
+              <div className="job-chip mx-auto lg:mx-0 mb-4">
+                <span className="inline-flex items-center justify-center w-5 h-5 rounded-full bg-pulse-500 text-white mr-2">04</span>
+                <span>Top Companies</span>
+              </div>
+              <h2 className="text-3xl sm:text-4xl font-display font-bold mb-4">
+                Work at Amazing Companies
+              </h2>
+              <p className="text-lg text-gray-600 max-w-2xl">
+                Join industry-leading companies that are shaping the future and offer exceptional career opportunities.
+              </p>
             </div>
-            <h2 className="text-3xl sm:text-4xl font-display font-bold mb-4">
-              Work at Amazing Companies
-            </h2>
-            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-              Join industry-leading companies that are shaping the future and offer exceptional career opportunities.
-            </p>
+            <div className="hidden lg:block">
+              <img 
+                src={companyShowcase} 
+                alt="Company showcase illustration" 
+                className="w-full h-auto max-w-md mx-auto"
+              />
+            </div>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -97,7 +113,11 @@ const CompanyShowcase = () => {
                 <div className="p-6">
                   <div className="flex items-start justify-between mb-4">
                     <div className="flex items-center gap-3">
-                      <div className="text-3xl">{company.logo}</div>
+                      <img 
+                        src={company.logo} 
+                        alt={`${company.name} logo`}
+                        className="w-12 h-12 rounded-lg object-cover shadow-md"
+                      />
                       <div>
                         <h3 className="font-semibold text-lg text-gray-800">{company.name}</h3>
                         <div className="flex items-center gap-1 text-sm text-gray-600">

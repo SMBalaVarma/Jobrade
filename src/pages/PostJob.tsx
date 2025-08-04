@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { Building, MapPin, DollarSign, Clock } from "lucide-react";
+import postJobIllustration from "/assets/post-job.webp";
 
 const PostJob = () => {
   const [formData, setFormData] = useState({
@@ -35,13 +36,24 @@ const PostJob = () => {
       <Navbar />
       <div className="pt-20 pb-12">
         <div className="container mx-auto px-6">
-          <div className="max-w-3xl mx-auto">
-            <div className="text-center mb-8">
-              <h1 className="text-3xl font-bold text-gray-900 mb-4">Post a Job</h1>
-              <p className="text-gray-600">Find the perfect candidate for your team</p>
+          <div className="max-w-6xl mx-auto">
+            <div className="grid lg:grid-cols-2 gap-12 items-center mb-8">
+              <div className="text-center lg:text-left">
+                <h1 className="text-3xl font-bold text-gray-900 mb-4">Post a Job</h1>
+                <p className="text-gray-600">Find the perfect candidate for your team</p>
+              </div>
+              <div className="hidden lg:block">
+                <img 
+                  src={postJobIllustration} 
+                  alt="Post job illustration" 
+                  className="w-full h-auto max-w-md mx-auto"
+                />
+              </div>
             </div>
+            
+            <div className="max-w-3xl mx-auto">
 
-            <div className="bg-white rounded-lg shadow-sm border border-gray-200 p-8">
+              <div className="bg-white rounded-lg shadow-sm border border-gray-200 p-8">
               <form onSubmit={handleSubmit} className="space-y-8">
                 {/* Job Details Section */}
                 <div>
@@ -244,12 +256,13 @@ const PostJob = () => {
                   </button>
                 </div>
               </form>
-            </div>
+              </div>
 
-            <div className="mt-8 text-center">
-              <p className="text-sm text-gray-500">
-                Need help? <a href="#" className="text-pulse-500 hover:text-pulse-600">Contact our support team</a>
-              </p>
+              <div className="mt-8 text-center">
+                <p className="text-sm text-gray-500">
+                  Need help? <a href="#" className="text-pulse-500 hover:text-pulse-600">Contact our support team</a>
+                </p>
+              </div>
             </div>
           </div>
         </div>

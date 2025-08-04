@@ -2,6 +2,13 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import browseJobsIllustration from "/assets/browse-jobs.webp";
+import techInnovatorsLogo from "/assets/logos/tech-innovators-logo.webp";
+import digitalSolutionsLogo from "/assets/logos/digital-solutions-logo.webp";
+import creativeMindsLogo from "/assets/logos/creative-minds-logo.webp";
+import startupHubLogo from "/assets/logos/startup-hub-logo.webp";
+import innovativeSoftwareLogo from "/assets/logos/innovative-software-logo.webp";
+import globalTechLogo from "/assets/logos/global-tech-logo.webp";
 import { Input } from "@/components/ui/input";
 import { Slider } from "@/components/ui/slider";
 import { Button } from "@/components/ui/button";
@@ -32,7 +39,7 @@ const BrowseJobs = () => {
       type: "Full Time",
       salary: "$80,000 - $120,000",
       posted: "2 days ago",
-      logo: "TI",
+      logo: techInnovatorsLogo,
       logoColor: "bg-emerald-500",
       featured: true,
       description: "Join our dynamic team building cutting-edge web applications with React and Node.js."
@@ -45,7 +52,7 @@ const BrowseJobs = () => {
       type: "Full Time", 
       salary: "$70,000 - $100,000",
       posted: "1 day ago",
-      logo: "DS",
+      logo: digitalSolutionsLogo,
       logoColor: "bg-blue-500",
       featured: false,
       description: "Work with modern frameworks to create beautiful user interfaces and experiences."
@@ -58,7 +65,7 @@ const BrowseJobs = () => {
       type: "Part Time",
       salary: "$60,000 - $90,000", 
       posted: "3 days ago",
-      logo: "CM",
+      logo: creativeMindsLogo,
       logoColor: "bg-purple-500",
       featured: false,
       description: "Design and develop responsive websites for creative agencies and startups."
@@ -71,7 +78,7 @@ const BrowseJobs = () => {
       type: "Full Time",
       salary: "$50,000 - $70,000",
       posted: "1 week ago", 
-      logo: "SH",
+      logo: startupHubLogo,
       logoColor: "bg-orange-500",
       featured: false,
       description: "Perfect opportunity for recent graduates to learn and grow in a fast-paced environment."
@@ -84,7 +91,7 @@ const BrowseJobs = () => {
       type: "Full Time",
       salary: "$90,000 - $130,000",
       posted: "5 days ago",
-      logo: "IS",
+      logo: innovativeSoftwareLogo,
       logoColor: "bg-indigo-500",
       featured: true,
       description: "Lead frontend development initiatives using the latest technologies and best practices."
@@ -97,7 +104,7 @@ const BrowseJobs = () => {
       type: "Contract",
       salary: "$85,000 - $115,000",
       posted: "4 days ago",
-      logo: "GT",
+      logo: globalTechLogo,
       logoColor: "bg-gray-700",
       featured: false,
       description: "Develop and maintain large-scale React applications for enterprise clients."
@@ -278,7 +285,18 @@ const BrowseJobs = () => {
           <div className="flex-1">
             {/* Search Header */}
             <div className="bg-card rounded-lg border p-6 mb-6">
-              <h1 className="text-2xl font-bold text-foreground mb-4">Search Results</h1>
+              <div className="grid lg:grid-cols-2 gap-8 items-center mb-6">
+                <div>
+                  <h1 className="text-2xl font-bold text-foreground mb-4">Search Results</h1>
+                </div>
+                <div className="hidden lg:block">
+                  <img 
+                    src={browseJobsIllustration} 
+                    alt="Browse jobs illustration" 
+                    className="w-full h-auto max-w-sm mx-auto"
+                  />
+                </div>
+              </div>
               
               {/* Search Bar */}
               <div className="flex flex-col sm:flex-row gap-4 mb-6">
@@ -343,9 +361,11 @@ const BrowseJobs = () => {
                 >
                   <div className="flex items-start gap-4">
                     {/* Company Logo */}
-                    <div className={`w-12 h-12 ${job.logoColor} rounded-lg flex items-center justify-center text-white font-semibold text-sm shrink-0`}>
-                      {job.logo}
-                    </div>
+                    <img 
+                      src={job.logo} 
+                      alt={`${job.company} logo`}
+                      className="w-12 h-12 rounded-lg object-cover shadow-md shrink-0"
+                    />
 
                     {/* Job Info */}
                     <div className="flex-1 min-w-0">

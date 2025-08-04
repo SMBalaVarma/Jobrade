@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { Search, MapPin, Filter, Briefcase, Clock, DollarSign } from "lucide-react";
+import jobSearchIllustration from "/assets/job-search-illustration.webp";
 
 const JobSearch = () => {
   const [searchKeyword, setSearchKeyword] = useState("");
@@ -31,13 +32,22 @@ const JobSearch = () => {
     <section className="py-12 sm:py-16 bg-white" id="job-search">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="max-w-6xl mx-auto">
-          <div className="text-center mb-8 sm:mb-12">
-            <h2 className="text-3xl sm:text-4xl font-display font-bold mb-4">
-              Advanced Job Search
-            </h2>
-            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-              Use our advanced filters to find the perfect job opportunities that match your preferences.
-            </p>
+          <div className="grid lg:grid-cols-2 gap-12 items-center mb-8 sm:mb-12">
+            <div className="text-center lg:text-left">
+              <h2 className="text-3xl sm:text-4xl font-display font-bold mb-4">
+                Advanced Job Search
+              </h2>
+              <p className="text-lg text-gray-600 max-w-2xl">
+                Use our advanced filters to find the perfect job opportunities that match your preferences.
+              </p>
+            </div>
+            <div className="hidden lg:block">
+              <img 
+                src={jobSearchIllustration} 
+                alt="Job search illustration" 
+                className="w-full h-auto max-w-md mx-auto"
+              />
+            </div>
           </div>
 
           <div className="bg-gray-50 rounded-2xl p-6 sm:p-8 shadow-elegant">

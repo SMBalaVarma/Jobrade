@@ -24,6 +24,9 @@ import {
   Globe,
   User
 } from "lucide-react";
+import techInnovatorsLogo from "/assets/logos/tech-innovators-logo.webp";
+import digitalSolutionsLogo from "/assets/logos/digital-solutions-logo.webp";
+import creativeMindsLogo from "/assets/logos/creative-minds-logo.webp";
 
 const JobDetail = () => {
   const { jobId } = useParams();
@@ -124,7 +127,7 @@ const JobDetail = () => {
       type: "Full Time",
       salary: "$50k - $70k",
       posted: "17 hours ago",
-      logo: "https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?ixlib=rb-4.0.3&auto=format&fit=crop&w=64&h=64&q=80",
+      logo: techInnovatorsLogo,
       logoColor: "bg-gray-900",
       isImage: true
     },
@@ -136,7 +139,7 @@ const JobDetail = () => {
       type: "Full Time",
       salary: "$30k - $50k",
       posted: "17 hours ago",
-      logo: "https://images.unsplash.com/photo-1485827404703-89b55fcc595e?ixlib=rb-4.0.3&auto=format&fit=crop&w=64&h=64&q=80",
+      logo: digitalSolutionsLogo,
       logoColor: "bg-orange-500",
       isImage: true
     },
@@ -148,7 +151,7 @@ const JobDetail = () => {
       type: "Full Time",
       salary: "$50k - $70k",
       posted: "17 hours ago",
-      logo: "https://images.unsplash.com/photo-1496307653780-42ee777d4833?ixlib=rb-4.0.3&auto=format&fit=crop&w=64&h=64&q=80",
+      logo: creativeMindsLogo,
       logoColor: "bg-red-600",
       isImage: true
     }
