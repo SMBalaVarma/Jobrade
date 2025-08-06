@@ -1,6 +1,6 @@
 
 import React, { useRef } from "react";
-// import testimonialsIllustration from "@/assets/testimonials.webp";
+import testimonialsIllustration from "/assets/testimonials.webp";
 
 interface TestimonialProps {
   content: string;
@@ -75,7 +75,7 @@ const Testimonials = () => {
           </div>
           <div className="hidden lg:block">
             <img 
-              src="/assets/testimonials.webp"
+              src={testimonialsIllustration} 
               alt="Success stories illustration" 
               className="w-full h-auto max-w-md mx-auto"
             />

@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { toast } from "@/components/ui/use-toast";
-// import newsletterIllustration from "@/assets/newsletter.webp";
+import newsletterIllustration from "/assets/newsletter.webp";
 const Newsletter = () => {
   const [email, setEmail] = useState("");
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -54,7 +54,7 @@ const Newsletter = () => {
             
             <div className="hidden lg:block">
               <img 
-                src="/assets/newsletter.webp" 
+                src={newsletterIllustration} 
                 alt="Newsletter subscription illustration" 
                 className="w-full h-auto max-w-md mx-auto"
               />
