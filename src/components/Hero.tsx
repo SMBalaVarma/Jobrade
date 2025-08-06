@@ -1,8 +1,7 @@
-
 import React, { useEffect, useRef, useState } from "react";
 import { cn } from "@/lib/utils";
 import { Search, MapPin, Briefcase } from "lucide-react";
-import heroIllustration from "/assets/hero-illustration.png";
+import heroBackground from "/assets/hero-background.webp";
 
 const Hero = () => {
   const [searchKeyword, setSearchKeyword] = useState("");
@@ -28,27 +27,23 @@ const Hero = () => {
   
   return (
     <section 
-      className="overflow-hidden relative bg-gradient-to-br from-pulse-50 via-white to-pulse-100" 
+      className="overflow-hidden relative min-h-screen" 
       id="hero" 
       style={{
+        backgroundImage: `url(${heroBackground})`,
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+        backgroundRepeat: 'no-repeat',
         padding: isMobile ? '100px 12px 40px' : '120px 20px 60px'
       }}
     >
-      <div className="absolute -top-[10%] -right-[5%] w-1/2 h-[70%] bg-pulse-gradient opacity-20 blur-3xl rounded-full"></div>
+      {/* Dark overlay for better text readability */}
+      <div className="absolute inset-0 bg-black/40"></div>
       
-      {/* Hero illustration */}
-      <div className="absolute top-1/2 right-20 transform -translate-y-1/2 hidden lg:block opacity-80">
-        <img 
-          src={heroIllustration} 
-          alt="Professional job search illustration" 
-          className="w-[500px] h-[400px] object-contain"
-        />
-      </div>
-      
-      <div className="container px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+      <div className="container px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto relative z-10">
         <div className="text-center mb-8 sm:mb-12">
           <h1 
-            className="text-4xl sm:text-5xl lg:text-6xl font-display font-bold leading-tight mb-4 sm:mb-6 opacity-0 animate-fade-in" 
+            className="text-4xl sm:text-5xl lg:text-6xl font-display font-bold leading-tight mb-4 sm:mb-6 opacity-0 animate-fade-in text-white" 
             style={{ animationDelay: "0.1s" }}
           >
             Find Your Dream Job Today
@@ -56,7 +51,7 @@ const Hero = () => {
           
           <p 
             style={{ animationDelay: "0.3s" }} 
-            className="text-lg sm:text-xl text-gray-600 mb-8 sm:mb-12 max-w-2xl mx-auto opacity-0 animate-fade-in"
+            className="text-lg sm:text-xl text-white/90 mb-8 sm:mb-12 max-w-2xl mx-auto opacity-0 animate-fade-in"
           >
             Connect with top employers and discover opportunities that match your skills and ambitions.
           </p>
@@ -108,12 +103,12 @@ const Hero = () => {
             className="mt-8 sm:mt-12 opacity-0 animate-fade-in"
             style={{ animationDelay: "0.7s" }}
           >
-            <p className="text-gray-600 mb-4">Popular Categories:</p>
+            <p className="text-white/80 mb-4">Popular Categories:</p>
             <div className="flex flex-wrap justify-center gap-2 sm:gap-3">
               {["Technology", "Healthcare", "Finance", "Marketing", "Sales", "Remote"].map((category) => (
                 <button
                   key={category}
-                  className="px-4 py-2 bg-white border border-gray-300 rounded-full hover:border-pulse-500 hover:text-pulse-500 transition-colors duration-300 text-sm"
+                  className="px-4 py-2 bg-white/10 backdrop-blur-sm border border-white/30 text-white rounded-full hover:bg-white/20 hover:border-white/50 transition-colors duration-300 text-sm"
                 >
                   {category}
                 </button>
@@ -122,8 +117,6 @@ const Hero = () => {
           </div>
         </div>
       </div>
-      
-      <div className="hidden lg:block absolute bottom-0 left-1/4 w-64 h-64 bg-pulse-100/30 rounded-full blur-3xl -z-10"></div>
     </section>
   );
 };
