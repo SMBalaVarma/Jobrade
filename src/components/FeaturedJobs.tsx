@@ -1,13 +1,13 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { MapPin, Clock, DollarSign, Bookmark } from "lucide-react";
-import featuredJobsIllustration from "/assets/featured-jobs.webp";
-import techCorpLogo from "/assets/logos/techcorp-logo.webp";
-import innovateCoLogo from "/assets/logos/innovateco-logo.webp";
-import designStudioLogo from "/assets/logos/designstudio-logo.webp";
-import dataFlowLogo from "/assets/logos/dataflow-logo.webp";
-import growthLabsLogo from "/assets/logos/growthlabs-logo.webp";
-import cloudTechLogo from "/assets/logos/cloudtech-logo.webp";
+import featuredJobsIllustration from "@/assets/featured-jobs.webp";
+import techCorpLogo from "@/assets/logos/techcorp-logo.webp";
+import innovateCoLogo from "@/assets/logos/innovateco-logo.webp";
+import designStudioLogo from "@/assets/logos/designstudio-logo.webp";
+import dataFlowLogo from "@/assets/logos/dataflow-logo.webp";
+import growthLabsLogo from "@/assets/logos/growthlabs-logo.webp";
+import cloudTechLogo from "@/assets/logos/cloudtech-logo.webp";
 
 const FeaturedJobs = () => {
   const jobs = [
