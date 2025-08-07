@@ -8,7 +8,7 @@ const Newsletter = () => {
     e.preventDefault();
     if (!email) {
       toast({
-        title: "Please enter your email address",
+        title: "Bitte geben Sie Ihre E-Mail-Adresse ein",
         variant: "destructive"
       });
       return;
@@ -18,8 +18,8 @@ const Newsletter = () => {
     // Simulate API call
     setTimeout(() => {
       toast({
-                title: "Job alerts activated!",
-                description: "You'll receive personalized job recommendations in your inbox."
+                title: "Job-Benachrichtigungen aktiviert!",
+                description: "Sie erhalten personalisierte Jobempfehlungen in Ihrem Posteingang."
       });
       setEmail("");
       setIsSubmitting(false);
@@ -33,21 +33,21 @@ const Newsletter = () => {
               <div className="flex items-center gap-4 mb-6">
                 <div className="job-chip">
                   <span className="inline-flex items-center justify-center w-5 h-5 rounded-full bg-pulse-500 text-white mr-2">06</span>
-                  <span>Job Alerts</span>
+                  <span>Job-Benachrichtigungen</span>
                 </div>
               </div>
               
-              <h2 className="text-5xl font-display font-bold mb-4 text-left">Stay Updated with Job Alerts</h2>
+              <h2 className="text-5xl font-display font-bold mb-4 text-left">Bleiben Sie mit Job-Benachrichtigungen auf dem Laufenden</h2>
               <p className="text-xl text-gray-700 mb-10 text-left">
-                Get personalized job recommendations and never miss your dream opportunity
+                Erhalten Sie personalisierte Jobempfehlungen und verpassen Sie nie Ihre Traumchance
               </p>
               
               <form onSubmit={handleSubmit} className="flex flex-col md:flex-row gap-4 items-start md:items-center">
                 <div className="relative flex-grow">
-                  <input type="email" value={email} onChange={e => setEmail(e.target.value)} placeholder="Enter your email for job alerts" className="w-full px-6 py-4 rounded-full border border-gray-200 focus:outline-none focus:ring-2 focus:ring-pulse-500 text-gray-700" required />
+                  <input type="email" value={email} onChange={e => setEmail(e.target.value)} placeholder="Geben Sie Ihre E-Mail für Job-Benachrichtigungen ein" className="w-full px-6 py-4 rounded-full border border-gray-200 focus:outline-none focus:ring-2 focus:ring-pulse-500 text-gray-700" required />
                 </div>
                 <button type="submit" disabled={isSubmitting} className="bg-pulse-500 hover:bg-pulse-600 text-white font-medium py-4 px-10 rounded-full transition-all duration-300 md:ml-4">
-                  {isSubmitting ? "Activating..." : "Get Job Alerts"}
+                  {isSubmitting ? "Aktivierung..." : "Job-Benachrichtigungen erhalten"}
                 </button>
               </form>
             </div>

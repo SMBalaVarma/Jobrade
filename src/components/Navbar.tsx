@@ -57,18 +57,18 @@ const Navbar = () => {
           }}
           aria-label="JobSearch Pro"
         >
-          <div className="text-xl font-display font-bold text-pulse-600">JobSearch Pro</div>
+          <div className="text-xl font-display font-bold text-pulse-600">Jobard.de</div>
         </a>
 
         {/* Desktop Navigation */}
         <nav className="hidden md:flex items-center space-x-8">
-          <Link to="/" className="nav-link">Home</Link>
-          <Link to="/browse-jobs" className="nav-link">Browse Jobs</Link>
-          <Link to="/companies" className="nav-link">Companies</Link>
-          <Link to="/resources" className="nav-link">Resources</Link>
+          <Link to="/" className="nav-link">Startseite</Link>
+          <Link to="/browse-jobs" className="nav-link">Jobs Finden</Link>
+          <Link to="/companies" className="nav-link">Unternehmen</Link>
+          <Link to="/resources" className="nav-link">Ressourcen</Link>
           <div className="flex items-center space-x-4 ml-4">
-            <Link to="/sign-in" className="text-gray-700 hover:text-pulse-500 font-medium">Sign In</Link>
-            <Link to="/post-job" className="bg-pulse-500 hover:bg-pulse-600 text-white px-4 py-2 rounded-full font-medium transition-colors">Post a Job</Link>
+            <Link to="/sign-in" className="text-gray-700 hover:text-pulse-500 font-medium">Anmelden</Link>
+            <Link to="/post-job" className="bg-pulse-500 hover:bg-pulse-600 text-white px-4 py-2 rounded-full font-medium transition-colors">Job Inserieren</Link>
           </div>
         </nav>
 
@@ -96,7 +96,7 @@ const Navbar = () => {
               document.body.style.overflow = '';
             }}
           >
-            Home
+            Startseite
           </Link>
           <Link 
             to="/browse-jobs" 
@@ -106,7 +106,7 @@ const Navbar = () => {
               document.body.style.overflow = '';
             }}
           >
-            Browse Jobs
+            Jobs Finden
           </Link>
           <Link 
             to="/companies" 
@@ -116,7 +116,7 @@ const Navbar = () => {
               document.body.style.overflow = '';
             }}
           >
-            Companies
+            Unternehmen
           </Link>
           <Link 
             to="/resources" 
@@ -126,11 +126,11 @@ const Navbar = () => {
               document.body.style.overflow = '';
             }}
           >
-            Resources
+            Ressourcen
           </Link>
           <div className="flex flex-col space-y-4 w-full pt-6 border-t border-gray-200">
-            <Link to="/sign-in" className="text-lg font-medium py-3 px-6 w-full text-center rounded-lg hover:bg-gray-100">Sign In</Link>
-            <Link to="/post-job" className="bg-pulse-500 hover:bg-pulse-600 text-white text-lg font-medium py-3 px-6 w-full text-center rounded-lg">Post a Job</Link>
+            <Link to="/sign-in" className="text-lg font-medium py-3 px-6 w-full text-center rounded-lg hover:bg-gray-100">Anmelden</Link>
+            <Link to="/post-job" className="bg-pulse-500 hover:bg-pulse-600 text-white text-lg font-medium py-3 px-6 w-full text-center rounded-lg">Job Inserieren</Link>
           </div>
         </nav>
       </div>

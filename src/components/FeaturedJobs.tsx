@@ -1,14 +1,13 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { MapPin, Clock, DollarSign, Bookmark } from "lucide-react";
-import featuredJobsIllustration from "@/assets/featured-jobs.webp";
-import techCorpLogo from "@/assets/logos/techcorp-logo.webp";
-import innovateCoLogo from "@/assets/logos/innovateco-logo.webp";
-import designStudioLogo from "@/assets/logos/designstudio-logo.webp";
-import dataFlowLogo from "@/assets/logos/dataflow-logo.webp";
-import growthLabsLogo from "@/assets/logos/growthlabs-logo.webp";
-import cloudTechLogo from "@/assets/logos/cloudtech-logo.webp";
-
+import featuredJobsIllustration from "/assets/featured-jobs.webp";
+import techCorpLogo from "/assets/logos/techcorp-logo.webp";
+import innovateCoLogo from "/assets/logos/innovateco-logo.webp";
+import designStudioLogo from "/assets/logos/designstudio-logo.webp";
+import dataFlowLogo from "/assets/logos/dataflow-logo.webp";
+import growthLabsLogo from "/assets/logos/growthlabs-logo.webp";
+import cloudTechLogo from "/assets/logos/cloudtech-logo.webp";
 const FeaturedJobs = () => {
   const jobs = [
     {
@@ -101,13 +100,13 @@ const FeaturedJobs = () => {
             <div className="text-center lg:text-left">
               <div className="job-chip mx-auto lg:mx-0 mb-4">
                 <span className="inline-flex items-center justify-center w-5 h-5 rounded-full bg-pulse-500 text-white mr-2">02</span>
-                <span>Featured Jobs</span>
+                <span>Top Jobs</span>
               </div>
               <h2 className="text-3xl sm:text-4xl font-display font-bold mb-4">
-                Top Job Opportunities
+                Top Job-Möglichkeiten
               </h2>
               <p className="text-lg text-gray-600 max-w-2xl">
-                Discover hand-picked job opportunities from leading companies across various industries.
+                Entdecken Sie handverlesene Job-Möglichkeiten von führenden Unternehmen verschiedener Branchen.
               </p>
             </div>
             <div className="hidden lg:block">
@@ -180,7 +179,7 @@ const FeaturedJobs = () => {
                       to={`/job/${job.id}`}
                       className="bg-pulse-500 hover:bg-pulse-600 text-white px-4 py-2 rounded-lg text-sm font-medium transition-colors inline-block"
                     >
-                      Apply Now
+                      Jetzt Bewerben
                     </Link>
                   </div>
                 </div>
@@ -190,7 +189,7 @@ const FeaturedJobs = () => {
 
           <div className="text-center mt-8 sm:mt-12">
             <button className="bg-white border border-pulse-500 text-pulse-500 hover:bg-pulse-500 hover:text-white px-8 py-3 rounded-lg font-medium transition-all duration-300">
-              View All Jobs
+              Alle Jobs Anzeigen
             </button>
           </div>
         </div>

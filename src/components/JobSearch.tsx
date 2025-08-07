@@ -9,19 +9,19 @@ const JobSearch = () => {
   const [salaryRange, setSalaryRange] = useState("all");
 
   const jobTypes = [
-    { value: "all", label: "All Types" },
-    { value: "full-time", label: "Full-time" },
-    { value: "part-time", label: "Part-time" },
-    { value: "contract", label: "Contract" },
+    { value: "all", label: "Alle Arten" },
+    { value: "full-time", label: "Vollzeit" },
+    { value: "part-time", label: "Teilzeit" },
+    { value: "contract", label: "Vertrag" },
     { value: "remote", label: "Remote" },
   ];
 
   const salaryRanges = [
-    { value: "all", label: "All Salaries" },
-    { value: "30k-50k", label: "$30k - $50k" },
-    { value: "50k-75k", label: "$50k - $75k" },
-    { value: "75k-100k", label: "$75k - $100k" },
-    { value: "100k+", label: "$100k+" },
+    { value: "all", label: "Alle Gehälter" },
+    { value: "30k-50k", label: "30k€ - 50k€" },
+    { value: "50k-75k", label: "50k€ - 75k€" },
+    { value: "75k-100k", label: "75k€ - 100k€" },
+    { value: "100k+", label: "100k€+" },
   ];
 
   const handleSearch = () => {
@@ -35,10 +35,10 @@ const JobSearch = () => {
           <div className="grid lg:grid-cols-2 gap-12 items-center mb-8 sm:mb-12">
             <div className="text-center lg:text-left">
               <h2 className="text-3xl sm:text-4xl font-display font-bold mb-4">
-                Advanced Job Search
+                Erweiterte Jobsuche
               </h2>
               <p className="text-lg text-gray-600 max-w-2xl">
-                Use our advanced filters to find the perfect job opportunities that match your preferences.
+                Nutzen Sie unsere erweiterten Filter, um die perfekten Jobmöglichkeiten zu finden, die zu Ihren Präferenzen passen.
               </p>
             </div>
             <div className="hidden lg:block">
@@ -59,7 +59,7 @@ const JobSearch = () => {
                 </div>
                 <input
                   type="text"
-                  placeholder="Job title, keywords, or company"
+                  placeholder="Jobtitel, Schlüsselwörter oder Unternehmen"
                   value={searchKeyword}
                   onChange={(e) => setSearchKeyword(e.target.value)}
                   className="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-pulse-500 focus:border-transparent"
@@ -72,7 +72,7 @@ const JobSearch = () => {
                 </div>
                 <input
                   type="text"
-                  placeholder="City, state, or remote"
+                  placeholder="Stadt, Bundesland oder Remote"
                   value={location}
                   onChange={(e) => setLocation(e.target.value)}
                   className="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-pulse-500 focus:border-transparent"
@@ -84,7 +84,7 @@ const JobSearch = () => {
                 className="bg-pulse-500 hover:bg-pulse-600 text-white font-semibold py-3 px-6 rounded-lg transition-all duration-300 transform hover:scale-105 flex items-center justify-center gap-2"
               >
                 <Search className="h-5 w-5" />
-                Search Jobs
+                Jobs Finden
               </button>
             </div>
 
@@ -129,16 +129,16 @@ const JobSearch = () => {
           {/* Popular Job Categories */}
           <div className="mt-12 sm:mt-16">
             <h3 className="text-2xl font-display font-bold mb-8 text-center">
-              Popular Job Categories
+              Beliebte Job-Kategorien
             </h3>
             <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-4">
               {[
-                { name: "Technology", count: "2,847", icon: "💻" },
-                { name: "Healthcare", count: "1,923", icon: "🏥" },
-                { name: "Finance", count: "1,456", icon: "💰" },
+                { name: "Technologie", count: "2,847", icon: "💻" },
+                { name: "Gesundheitswesen", count: "1,923", icon: "🏥" },
+                { name: "Finanzen", count: "1,456", icon: "💰" },
                 { name: "Marketing", count: "1,234", icon: "📊" },
-                { name: "Sales", count: "1,098", icon: "🛍️" },
-                { name: "Education", count: "876", icon: "📚" },
+                { name: "Vertrieb", count: "1,098", icon: "🛍️" },
+                { name: "Bildung", count: "876", icon: "📚" },
               ].map((category) => (
                 <div
                   key={category.name}
@@ -146,7 +146,7 @@ const JobSearch = () => {
                 >
                   <div className="text-2xl mb-2">{category.icon}</div>
                   <h4 className="font-semibold text-gray-800 mb-1">{category.name}</h4>
-                  <p className="text-sm text-gray-600">{category.count} jobs</p>
+                  <p className="text-sm text-gray-600">{category.count} Jobs</p>
                 </div>
               ))}
             </div>

@@ -1,3 +1,4 @@
+
 import React, { useEffect, useRef, useState } from "react";
 import { cn } from "@/lib/utils";
 import { Search, MapPin, Briefcase } from "lucide-react";
@@ -46,14 +47,14 @@ const Hero = () => {
             className="text-4xl sm:text-5xl lg:text-6xl font-display font-bold leading-tight mb-4 sm:mb-6 opacity-0 animate-fade-in text-white" 
             style={{ animationDelay: "0.1s" }}
           >
-            Find Your Dream Job Today
+            Finden Sie Ihren Traumjob
           </h1>
           
           <p 
             style={{ animationDelay: "0.3s" }} 
             className="text-lg sm:text-xl text-white/90 mb-8 sm:mb-12 max-w-2xl mx-auto opacity-0 animate-fade-in"
           >
-            Connect with top employers and discover opportunities that match your skills and ambitions.
+            Verbinden Sie sich mit Top-Arbeitgebern und entdecken Sie Möglichkeiten, die zu Ihren Fähigkeiten und Ambitionen passen.
           </p>
 
           {/* Job Search Bar */}
@@ -68,7 +69,7 @@ const Hero = () => {
                 </div>
                 <input
                   type="text"
-                  placeholder="Job title, keywords, or company"
+                  placeholder="Jobtitel, Schlüsselwörter oder Unternehmen"
                   value={searchKeyword}
                   onChange={(e) => setSearchKeyword(e.target.value)}
                   className="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-pulse-500 focus:border-transparent"
@@ -81,7 +82,7 @@ const Hero = () => {
                 </div>
                 <input
                   type="text"
-                  placeholder="City, state, or remote"
+                  placeholder="Stadt, Bundesland oder Remote"
                   value={location}
                   onChange={(e) => setLocation(e.target.value)}
                   className="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-pulse-500 focus:border-transparent"
@@ -93,7 +94,7 @@ const Hero = () => {
                 className="bg-pulse-500 hover:bg-pulse-600 text-white font-semibold py-3 px-6 sm:px-8 rounded-lg transition-all duration-300 transform hover:scale-105 flex items-center justify-center gap-2"
               >
                 <Search className="h-5 w-5" />
-                Search Jobs
+                Jobs Finden
               </button>
             </div>
           </div>
@@ -103,9 +104,9 @@ const Hero = () => {
             className="mt-8 sm:mt-12 opacity-0 animate-fade-in"
             style={{ animationDelay: "0.7s" }}
           >
-            <p className="text-white/80 mb-4">Popular Categories:</p>
+            <p className="text-white/80 mb-4">Beliebte Kategorien:</p>
             <div className="flex flex-wrap justify-center gap-2 sm:gap-3">
-              {["Technology", "Healthcare", "Finance", "Marketing", "Sales", "Remote"].map((category) => (
+              {["Technologie", "Gesundheitswesen", "Finanzen", "Marketing", "Vertrieb", "Remote"].map((category) => (
                 <button
                   key={category}
                   className="px-4 py-2 bg-white/10 backdrop-blur-sm border border-white/30 text-white rounded-full hover:bg-white/20 hover:border-white/50 transition-colors duration-300 text-sm"
