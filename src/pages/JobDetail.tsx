@@ -56,7 +56,7 @@ const JobDetail = () => {
       <div className="min-h-screen bg-background">
         <Navbar />
         <div className="container mx-auto px-4 py-20 text-center">
-          <div className="text-lg">Loading...</div>
+          <div className="text-lg">Wird geladen...</div>
         </div>
         <Footer />
       </div>
@@ -68,7 +68,7 @@ const JobDetail = () => {
       <div className="min-h-screen bg-background">
         <Navbar />
         <div className="container mx-auto px-4 py-20 text-center">
-          <div className="text-lg">Job not found</div>
+          <div className="text-lg">Stellenanzeige nicht gefunden</div>
         </div>
         <Footer />
       </div>
@@ -196,19 +196,19 @@ const JobDetail = () => {
 
                 {/* Tags */}
                 <div className="flex flex-wrap gap-3 mb-6">
-                  <Badge className="bg-primary text-primary-foreground hover:bg-primary/90 px-4 py-2 text-sm font-medium">Full Time</Badge>
-                  <Badge className="bg-green-500 text-white hover:bg-green-600 px-4 py-2 text-sm font-medium">Private</Badge>
-                  <Badge className="bg-yellow-500 text-white hover:bg-yellow-600 px-4 py-2 text-sm font-medium">Urgent</Badge>
+                  <Badge className="bg-primary text-primary-foreground hover:bg-primary/90 px-4 py-2 text-sm font-medium">Vollzeit</Badge>
+                  <Badge className="bg-green-500 text-white hover:bg-green-600 px-4 py-2 text-sm font-medium">Privat</Badge>
+                  <Badge className="bg-yellow-500 text-white hover:bg-yellow-600 px-4 py-2 text-sm font-medium">Dringend</Badge>
                 </div>
 
                 {/* Apply Button */}
                 <div className="flex items-center gap-4">
                   <Button size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground px-8 py-3 text-lg font-semibold shadow-lg hover:shadow-xl transition-all">
-                    Apply for job
+                    Jetzt bewerben
                   </Button>
                   <Button variant="outline" size="lg" className="border-primary text-primary hover:bg-primary hover:text-primary-foreground">
                     <Heart className="h-5 w-5 mr-2" />
-                    Save Job
+                    Job speichern
                   </Button>
                 </div>
               </div>
@@ -237,7 +237,7 @@ const JobDetail = () => {
               <div className="bg-card rounded-xl border shadow-sm p-8">
                 <h2 className="text-2xl font-bold text-foreground mb-6 flex items-center gap-3">
                   <div className="w-1 h-8 bg-primary rounded-full"></div>
-                  Job Description
+                  Stellenbeschreibung
                 </h2>
                 <p className="text-muted-foreground leading-relaxed text-lg">{job.description}</p>
               </div>
@@ -246,7 +246,7 @@ const JobDetail = () => {
               <div className="bg-card rounded-xl border shadow-sm p-8">
                 <h3 className="text-2xl font-bold text-foreground mb-6 flex items-center gap-3">
                   <div className="w-1 h-8 bg-primary rounded-full"></div>
-                  Key Responsibilities
+                  Hauptverantwortlichkeiten
                 </h3>
                 <ul className="space-y-4">
                   {job.responsibilities.map((responsibility, index) => (
@@ -262,7 +262,7 @@ const JobDetail = () => {
               <div className="bg-card rounded-xl border shadow-sm p-8">
                 <h3 className="text-2xl font-bold text-foreground mb-6 flex items-center gap-3">
                   <div className="w-1 h-8 bg-primary rounded-full"></div>
-                  Skills & Experience
+                  Fähigkeiten & Erfahrung
                 </h3>
                 <ul className="space-y-4">
                   {job.skills.map((skill, index) => (
@@ -276,7 +276,7 @@ const JobDetail = () => {
 
               {/* Share */}
               <div className="bg-card rounded-xl border shadow-sm p-8">
-                <h3 className="text-xl font-bold text-foreground mb-6">Share this job</h3>
+                <h3 className="text-xl font-bold text-foreground mb-6">Diese Stelle teilen</h3>
                 <div className="flex flex-wrap gap-3">
                   <Button className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3">
                     <Facebook className="h-5 w-5 mr-2" />
@@ -297,15 +297,15 @@ const JobDetail = () => {
             <div className="xl:col-span-1 space-y-6">
               {/* Job Overview */}
               <div className="bg-card rounded-xl border shadow-sm p-6">
-                <h3 className="text-xl font-bold text-foreground mb-6">Job Overview</h3>
+                <h3 className="text-xl font-bold text-foreground mb-6">Stellenübersicht</h3>
                 <div className="space-y-5">
                   <div className="flex items-center gap-4">
                     <div className="w-10 h-10 bg-primary/10 rounded-lg flex items-center justify-center">
                       <Calendar className="h-5 w-5 text-primary" />
                     </div>
                     <div className="flex-1">
-                      <span className="text-sm text-muted-foreground">Date Posted:</span>
-                      <p className="text-sm font-medium text-foreground">Posted {job.posted}</p>
+                      <span className="text-sm text-muted-foreground">Veröffentlicht:</span>
+                      <p className="text-sm font-medium text-foreground">{job.posted}</p>
                     </div>
                   </div>
                   <div className="flex items-center gap-4">
@@ -313,7 +313,7 @@ const JobDetail = () => {
                       <CalendarX className="h-5 w-5 text-primary" />
                     </div>
                     <div className="flex-1">
-                      <span className="text-sm text-muted-foreground">Expiration date:</span>
+                      <span className="text-sm text-muted-foreground">Ablaufdatum:</span>
                       <p className="text-sm font-medium text-foreground">{job.expirationDate}</p>
                     </div>
                   </div>
@@ -322,7 +322,7 @@ const JobDetail = () => {
                       <MapPin className="h-5 w-5 text-primary" />
                     </div>
                     <div className="flex-1">
-                      <span className="text-sm text-muted-foreground">Location:</span>
+                      <span className="text-sm text-muted-foreground">Standort:</span>
                       <p className="text-sm font-medium text-foreground">{job.location}</p>
                     </div>
                   </div>
@@ -331,7 +331,7 @@ const JobDetail = () => {
                       <Briefcase className="h-5 w-5 text-primary" />
                     </div>
                     <div className="flex-1">
-                      <span className="text-sm text-muted-foreground">Job Title:</span>
+                      <span className="text-sm text-muted-foreground">Stellentitel:</span>
                       <p className="text-sm font-medium text-foreground">Designer</p>
                     </div>
                   </div>
@@ -340,7 +340,7 @@ const JobDetail = () => {
                       <Clock className="h-5 w-5 text-primary" />
                     </div>
                     <div className="flex-1">
-                      <span className="text-sm text-muted-foreground">Hours:</span>
+                      <span className="text-sm text-muted-foreground">Stunden:</span>
                       <p className="text-sm font-medium text-foreground">{job.hours}</p>
                     </div>
                   </div>
@@ -349,7 +349,7 @@ const JobDetail = () => {
                       <DollarSign className="h-5 w-5 text-primary" />
                     </div>
                     <div className="flex-1">
-                      <span className="text-sm text-muted-foreground">Salary:</span>
+                      <span className="text-sm text-muted-foreground">Gehalt:</span>
                       <p className="text-sm font-medium text-foreground">{job.salary}</p>
                     </div>
                   </div>
@@ -358,7 +358,7 @@ const JobDetail = () => {
 
               {/* Job Location */}
               <div className="bg-card rounded-xl border shadow-sm p-6">
-                <h3 className="text-xl font-bold text-foreground mb-4">Job Location</h3>
+                <h3 className="text-xl font-bold text-foreground mb-4">Arbeitsort</h3>
                 <div className="h-48 bg-gradient-to-br from-primary/10 to-primary/20 rounded-lg flex items-center justify-center relative overflow-hidden">
                   <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-primary/15"></div>
                   <div className="relative z-10 text-center">
@@ -372,7 +372,7 @@ const JobDetail = () => {
 
               {/* Job Skills */}
               <div className="bg-card rounded-xl border shadow-sm p-6">
-                <h3 className="text-xl font-bold text-foreground mb-4">Job Skills</h3>
+                <h3 className="text-xl font-bold text-foreground mb-4">Erforderliche Fähigkeiten</h3>
                 <div className="flex flex-wrap gap-2">
                   {job.tags.map((tag, index) => (
                     <Badge key={index} className="bg-primary/10 text-primary hover:bg-primary/20 px-3 py-1 capitalize">
@@ -390,29 +390,29 @@ const JobDetail = () => {
                   </div>
                   <div>
                     <h3 className="font-bold text-foreground text-lg">{job.company}</h3>
-                    <Link to="#" className="text-primary hover:text-primary/80 text-sm font-medium">View company profile</Link>
+                    <Link to="#" className="text-primary hover:text-primary/80 text-sm font-medium">Unternehmensprofil anzeigen</Link>
                   </div>
                 </div>
                 
                 <div className="space-y-3 text-sm">
                   <div className="flex justify-between py-2 border-b border-border">
-                    <span className="text-muted-foreground">Primary Industry:</span>
+                    <span className="text-muted-foreground">Branche:</span>
                     <span className="text-foreground font-medium">{job.industry}</span>
                   </div>
                   <div className="flex justify-between py-2 border-b border-border">
-                    <span className="text-muted-foreground">Company Size:</span>
+                    <span className="text-muted-foreground">Unternehmensgröße:</span>
                     <span className="text-foreground font-medium">{job.companySize}</span>
                   </div>
                   <div className="flex justify-between py-2 border-b border-border">
-                    <span className="text-muted-foreground">Founded:</span>
+                    <span className="text-muted-foreground">Gegründet:</span>
                     <span className="text-foreground font-medium">{job.founded}</span>
                   </div>
                   <div className="flex justify-between py-2 border-b border-border">
-                    <span className="text-muted-foreground">Phone:</span>
+                    <span className="text-muted-foreground">Telefon:</span>
                     <span className="text-foreground font-medium">{job.phone}</span>
                   </div>
                   <div className="flex justify-between py-2 border-b border-border">
-                    <span className="text-muted-foreground">Email:</span>
+                    <span className="text-muted-foreground">E-Mail:</span>
                     <span className="text-foreground font-medium">{job.email}</span>
                   </div>
                 </div>
@@ -442,26 +442,26 @@ const JobDetail = () => {
 
               {/* Contact Form */}
               <div className="bg-card rounded-xl border shadow-sm p-6">
-                <h3 className="text-xl font-bold text-foreground mb-6">Contact Us</h3>
+                <h3 className="text-xl font-bold text-foreground mb-6">Kontakt</h3>
                 
                 <form className="space-y-4">
                   <div>
-                    <label className="text-sm font-medium text-foreground mb-2 block">Your Name</label>
-                    <Input placeholder="Enter your name" className="border-border focus:border-primary" />
+                    <label className="text-sm font-medium text-foreground mb-2 block">Ihr Name</label>
+                    <Input placeholder="Geben Sie Ihren Namen ein" className="border-border focus:border-primary" />
                   </div>
                   
                   <div>
-                    <label className="text-sm font-medium text-foreground mb-2 block">Email Address</label>
-                    <Input type="email" placeholder="Enter your email" className="border-border focus:border-primary" />
+                    <label className="text-sm font-medium text-foreground mb-2 block">E-Mail Adresse</label>
+                    <Input type="email" placeholder="Geben Sie Ihre E-Mail ein" className="border-border focus:border-primary" />
                   </div>
                   
                   <div>
-                    <label className="text-sm font-medium text-foreground mb-2 block">Message</label>
-                    <Textarea placeholder="Write your message..." rows={4} className="border-border focus:border-primary" />
+                    <label className="text-sm font-medium text-foreground mb-2 block">Nachricht</label>
+                    <Textarea placeholder="Schreiben Sie Ihre Nachricht..." rows={4} className="border-border focus:border-primary" />
                   </div>
                   
                   <Button className="w-full bg-primary hover:bg-primary/90 text-primary-foreground py-3 font-semibold">
-                    Send Message
+                    Nachricht senden
                   </Button>
                 </form>
               </div>
@@ -475,8 +475,8 @@ const JobDetail = () => {
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
             <div className="mb-12 text-center">
-              <h2 className="text-3xl font-bold text-foreground mb-4">Related Jobs</h2>
-              <p className="text-muted-foreground text-lg">2020 jobs live – 293 added today</p>
+              <h2 className="text-3xl font-bold text-foreground mb-4">Ähnliche Stellen</h2>
+              <p className="text-muted-foreground text-lg">2020 aktive Stellen – 293 heute hinzugefügt</p>
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -531,7 +531,7 @@ const JobDetail = () => {
                         {relatedJob.type}
                       </Badge>
                       <Badge className="bg-green-500 text-white text-xs px-2 py-1">
-                        Urgent
+                        Dringend
                       </Badge>
                     </div>
                     <span className="text-xs text-muted-foreground">{relatedJob.posted}</span>

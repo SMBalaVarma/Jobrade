@@ -7,47 +7,47 @@ const Companies = () => {
   const companies = [
     {
       id: 1,
-      name: "TechCorp",
+      name: "TechCorpDE",
       logo: "🏢",
-      industry: "Technology",
-      size: "1,000-5,000 employees",
-      location: "San Francisco, CA",
+      industry: "Technologie",
+      size: "1.000-5.000 Mitarbeiter",
+      location: "Berlin, Deutschland",
       rating: 4.5,
       openJobs: 23,
-      description: "Leading technology company building innovative solutions for the future."
+      description: "Führendes Technologieunternehmen, das innovative Lösungen für die Zukunft entwickelt."
     },
     {
       id: 2,
       name: "InnovateLabs",
       logo: "🔬",
-      industry: "Research & Development",
-      size: "500-1,000 employees",
-      location: "New York, NY",
+      industry: "Forschung & Entwicklung",
+      size: "500-1.000 Mitarbeiter",
+      location: "München, Deutschland",
       rating: 4.7,
       openJobs: 15,
-      description: "Cutting-edge research lab focused on breakthrough innovations."
+      description: "Hochmodernes Forschungslabor mit Fokus auf bahnbrechende Innovationen."
     },
     {
       id: 3,
       name: "DesignStudio",
       logo: "🎨",
-      industry: "Design & Creative",
-      size: "50-200 employees",
-      location: "Los Angeles, CA",
+      industry: "Design & Kreativität",
+      size: "50-200 Mitarbeiter",
+      location: "Hamburg, Deutschland",
       rating: 4.3,
       openJobs: 8,
-      description: "Award-winning design studio creating beautiful digital experiences."
+      description: "Preisgekröntes Designstudio, das wunderschöne digitale Erfahrungen schafft."
     },
     {
       id: 4,
       name: "DataFlow",
       logo: "📊",
-      industry: "Data & Analytics",
-      size: "200-500 employees",
-      location: "Austin, TX",
+      industry: "Daten & Analytik",
+      size: "200-500 Mitarbeiter",
+      location: "Frankfurt, Deutschland",
       rating: 4.6,
       openJobs: 12,
-      description: "Data analytics company helping businesses make informed decisions."
+      description: "Datenanalyseunternehmen, das Unternehmen bei fundierten Entscheidungen hilft."
     }
   ];
 
@@ -58,8 +58,8 @@ const Companies = () => {
         {/* Header */}
         <div className="bg-white border-b">
           <div className="container mx-auto px-6 py-8">
-            <h1 className="text-3xl font-bold text-gray-900 mb-4">Companies</h1>
-            <p className="text-gray-600 mb-6">Discover top employers and find your next workplace</p>
+            <h1 className="text-3xl font-bold text-gray-900 mb-4">Unternehmen</h1>
+            <p className="text-gray-600 mb-6">Entdecken Sie Top-Arbeitgeber und finden Sie Ihren nächsten Arbeitsplatz</p>
             
             {/* Search Bar */}
             <div className="flex flex-col md:flex-row gap-4">
@@ -67,7 +67,7 @@ const Companies = () => {
                 <Search className="absolute left-3 top-3 h-5 w-5 text-gray-400" />
                 <input
                   type="text"
-                  placeholder="Search companies..."
+                  placeholder="Unternehmen suchen..."
                   className="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-pulse-500 focus:border-transparent"
                 />
               </div>
@@ -75,12 +75,12 @@ const Companies = () => {
                 <MapPin className="absolute left-3 top-3 h-5 w-5 text-gray-400" />
                 <input
                   type="text"
-                  placeholder="Location"
+                  placeholder="Standort"
                   className="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-pulse-500 focus:border-transparent"
                 />
               </div>
               <button className="bg-pulse-500 hover:bg-pulse-600 text-white px-8 py-3 rounded-lg font-medium transition-colors">
-                Search
+                Suchen
               </button>
             </div>
           </div>
@@ -89,11 +89,11 @@ const Companies = () => {
         {/* Companies Grid */}
         <div className="container mx-auto px-6 py-8">
           <div className="flex justify-between items-center mb-6">
-            <p className="text-gray-600">{companies.length} companies found</p>
+            <p className="text-gray-600">{companies.length} Unternehmen gefunden</p>
             <select className="border border-gray-300 rounded-lg px-4 py-2 focus:ring-2 focus:ring-pulse-500 focus:border-transparent">
-              <option>Sort by: Most Popular</option>
-              <option>Sort by: Rating</option>
-              <option>Sort by: Company Size</option>
+              <option>Sortieren: Beliebteste</option>
+              <option>Sortieren: Bewertung</option>
+              <option>Sortieren: Unternehmensgröße</option>
             </select>
           </div>
 
@@ -129,10 +129,10 @@ const Companies = () => {
 
                 <div className="flex items-center justify-between">
                   <span className="text-pulse-600 font-medium text-sm">
-                    {company.openJobs} open positions
+                    {company.openJobs} offene Stellen
                   </span>
                   <button className="bg-pulse-500 hover:bg-pulse-600 text-white px-4 py-2 rounded-lg text-sm font-medium transition-colors">
-                    View Jobs
+                    Jobs Anzeigen
                   </button>
                 </div>
               </div>
@@ -141,13 +141,13 @@ const Companies = () => {
 
           {/* Featured Companies Section */}
           <div className="mt-12">
-            <h2 className="text-2xl font-bold text-gray-900 mb-6">Featured Companies</h2>
+            <h2 className="text-2xl font-bold text-gray-900 mb-6">Empfohlene Unternehmen</h2>
             <div className="bg-white rounded-lg shadow-sm border border-gray-200 p-8">
               <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-8 items-center">
                 {["🏢", "🔬", "🎨", "📊", "💼", "🚀"].map((logo, index) => (
                   <div key={index} className="text-center">
                     <div className="text-4xl mb-2">{logo}</div>
-                    <p className="text-sm text-gray-600">Company {index + 1}</p>
+                    <p className="text-sm text-gray-600">Unternehmen {index + 1}</p>
                   </div>
                 ))}
               </div>

@@ -5,64 +5,64 @@ import jobCategoriesIllustration from "/assets/job-categories.webp";
 const JobCategories = () => {
   const categories = [
     {
-      title: "Technology",
-      description: "Software development, IT, and engineering roles",
+      title: "Technologie",
+      description: "Softwareentwicklung, IT und Ingenieurwesen",
       jobCount: "2,847",
       icon: "💻",
       color: "from-blue-500 to-purple-600"
     },
     {
-      title: "Healthcare",
-      description: "Medical, nursing, and healthcare administration",
+      title: "Gesundheitswesen",
+      description: "Medizin, Pflege und Gesundheitsverwaltung",
       jobCount: "1,923",
       icon: "🏥",
       color: "from-green-500 to-teal-600"
     },
     {
-      title: "Finance",
-      description: "Banking, accounting, and financial services",
+      title: "Finanzen",
+      description: "Banking, Buchhaltung und Finanzdienstleistungen",
       jobCount: "1,456",
       icon: "💰",
       color: "from-yellow-500 to-orange-600"
     },
     {
       title: "Marketing",
-      description: "Digital marketing, brand management, and advertising",
+      description: "Digitales Marketing, Markenmanagement und Werbung",
       jobCount: "1,234",
       icon: "📊",
       color: "from-pink-500 to-red-600"
     },
     {
-      title: "Sales",
-      description: "Inside sales, business development, and account management",
+      title: "Vertrieb",
+      description: "Innendienst, Geschäftsentwicklung und Kundenbetreuung",
       jobCount: "1,098",
       icon: "🛍️",
       color: "from-indigo-500 to-blue-600"
     },
     {
-      title: "Education",
-      description: "Teaching, training, and educational administration",
+      title: "Bildung",
+      description: "Lehre, Ausbildung und Bildungsverwaltung",
       jobCount: "876",
       icon: "📚",
       color: "from-purple-500 to-pink-600"
     },
     {
-      title: "Customer Service",
-      description: "Support, success, and customer experience roles",
+      title: "Kundendienst",
+      description: "Support, Betreuung und Kundenerfahrung",
       jobCount: "743",
       icon: "🎧",
       color: "from-teal-500 to-cyan-600"
     },
     {
-      title: "Human Resources",
-      description: "Recruiting, talent management, and HR operations",
+      title: "Personalwesen",
+      description: "Recruiting, Talentmanagement und HR-Operationen",
       jobCount: "564",
       icon: "👥",
       color: "from-orange-500 to-red-600"
     },
     {
       title: "Operations",
-      description: "Project management, logistics, and business operations",
+      description: "Projektmanagement, Logistik und Geschäftsabläufe",
       jobCount: "487",
       icon: "⚙️",
       color: "from-gray-500 to-gray-700"
@@ -77,13 +77,13 @@ const JobCategories = () => {
             <div className="text-center lg:text-left">
               <div className="job-chip mx-auto lg:mx-0 mb-4">
                 <span className="inline-flex items-center justify-center w-5 h-5 rounded-full bg-pulse-500 text-white mr-2">03</span>
-                <span>Job Categories</span>
+                <span>Job-Kategorien</span>
               </div>
               <h2 className="text-3xl sm:text-4xl font-display font-bold mb-4">
-                Explore Career Opportunities
+                Entdecken Sie Karrieremöglichkeiten
               </h2>
               <p className="text-lg text-gray-600 max-w-2xl">
-                Find the perfect role in your field of expertise or explore new career paths with our diverse job categories.
+                Finden Sie die perfekte Rolle in Ihrem Fachgebiet oder entdecken Sie neue Karrierewege mit unseren vielfältigen Job-Kategorien.
               </p>
             </div>
             <div className="hidden lg:block">
@@ -106,7 +106,7 @@ const JobCategories = () => {
                     <div className="text-3xl">{category.icon}</div>
                     <div className="text-right">
                       <div className="text-2xl font-bold text-gray-800">{category.jobCount}</div>
-                      <div className="text-sm text-gray-600">open positions</div>
+                      <div className="text-sm text-gray-600">offene Stellen</div>
                     </div>
                   </div>
                   
@@ -120,7 +120,7 @@ const JobCategories = () => {
 
                   <div className="flex items-center justify-between">
                     <button className="text-pulse-600 hover:text-pulse-700 font-medium text-sm flex items-center gap-1 group-hover:gap-2 transition-all">
-                      Browse Jobs
+                      Jobs Durchsuchen
                       <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
                     </button>
                     
@@ -135,7 +135,7 @@ const JobCategories = () => {
 
           <div className="text-center mt-8 sm:mt-12">
             <button className="bg-pulse-500 hover:bg-pulse-600 text-white px-8 py-3 rounded-lg font-medium transition-all duration-300 transform hover:scale-105">
-              View All Categories
+              Alle Kategorien Anzeigen
             </button>
           </div>
         </div>

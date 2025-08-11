@@ -62,10 +62,10 @@ const Navbar = () => {
 
         {/* Desktop Navigation */}
         <nav className="hidden md:flex items-center space-x-8">
-          <Link to="/" className="nav-link">Startseite</Link>
-          <Link to="/browse-jobs" className="nav-link">Jobs Finden</Link>
-          <Link to="/companies" className="nav-link">Unternehmen</Link>
-          <Link to="/resources" className="nav-link">Ressourcen</Link>
+          <Link to="/" className={cn("nav-link", window.location.pathname === "/" && "text-pulse-600 font-semibold")}>Startseite</Link>
+          <Link to="/browse-jobs" className={cn("nav-link", window.location.pathname === "/browse-jobs" && "text-pulse-600 font-semibold")}>Jobs Finden</Link>
+          <Link to="/companies" className={cn("nav-link", window.location.pathname === "/companies" && "text-pulse-600 font-semibold")}>Unternehmen</Link>
+          <Link to="/resources" className={cn("nav-link", window.location.pathname === "/resources" && "text-pulse-600 font-semibold")}>Ressourcen</Link>
           <div className="flex items-center space-x-4 ml-4">
             <Link to="/sign-in" className="text-gray-700 hover:text-pulse-500 font-medium">Anmelden</Link>
             <Link to="/post-job" className="bg-pulse-500 hover:bg-pulse-600 text-white px-4 py-2 rounded-full font-medium transition-colors">Job Inserieren</Link>

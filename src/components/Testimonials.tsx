@@ -11,27 +11,27 @@ interface TestimonialProps {
 }
 
 const testimonials: TestimonialProps[] = [{
-  content: "JobSearch Pro helped me land my dream job at a top tech company. The personalized job recommendations and easy application process made all the difference.",
+  content: "Jobard.de hat mir geholfen, meinen Traumjob bei einem führenden Technologieunternehmen zu finden. Die personalisierten Jobempfehlungen und der einfache Bewerbungsprozess haben den Unterschied gemacht.",
   author: "Sarah Chen",
-  role: "Software Engineer at TechCorp",
+  role: "Softwareingenieurin bei TechCorp",
   gradient: "from-blue-700 via-indigo-800 to-purple-900",
   backgroundImage: "/background-section1.png"
 }, {
-  content: "As a recent graduate, I was overwhelmed by job searching. This platform connected me with amazing opportunities and provided great career guidance.",
+  content: "Als frischer Absolvent war ich von der Jobsuche überwältigt. Diese Plattform hat mich mit fantastischen Möglichkeiten verbunden und großartige Karriereberatung geboten.",
   author: "Michael Rodriguez",
-  role: "Marketing Manager at InnovateCo",
+  role: "Marketing Manager bei InnovateCo",
   gradient: "from-indigo-900 via-purple-800 to-orange-500",
   backgroundImage: "/background-section2.png"
 }, {
-  content: "The quality of job listings and company information on this platform is exceptional. I found my current role and couldn't be happier with my career growth.",
+  content: "Die Qualität der Stellenausschreibungen und Unternehmensinformationen auf dieser Plattform ist außergewöhnlich. Ich habe meine aktuelle Stelle gefunden und könnte nicht glücklicher mit meinem Karrierewachstum sein.",
   author: "Dr. Amara Patel",
-  role: "Data Scientist at DataFlow",
+  role: "Data Scientist bei DataFlow",
   gradient: "from-purple-800 via-pink-700 to-red-500",
   backgroundImage: "/background-section3.png"
 }, {
-  content: "From application to interview to offer - the entire process was seamless. The salary insights and interview tips were incredibly valuable.",
+  content: "Von der Bewerbung über das Vorstellungsgespräch bis zum Angebot - der gesamte Prozess war nahtlos. Die Gehaltseinblicke und Interview-Tipps waren unglaublich wertvoll.",
   author: "Jason Lee",
-  role: "Product Manager at GrowthLabs",
+  role: "Produktmanager bei GrowthLabs",
   gradient: "from-orange-600 via-red-500 to-purple-600",
   backgroundImage: "/background-section1.png"
 }];
@@ -67,11 +67,11 @@ const Testimonials = () => {
             <div className="flex items-center gap-4 mb-6">
               <div className="job-chip">
                 <span className="inline-flex items-center justify-center w-5 h-5 rounded-full bg-pulse-500 text-white mr-2">05</span>
-                <span>Success Stories</span>
+                <span>Erfolgsgeschichten</span>
               </div>
             </div>
             
-            <h2 className="text-5xl font-display font-bold mb-6 text-left">Success Stories</h2>
+            <h2 className="text-5xl font-display font-bold mb-6 text-left">Erfolgsgeschichten</h2>
           </div>
           <div className="hidden lg:block">
             <img 

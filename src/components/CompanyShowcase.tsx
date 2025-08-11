@@ -13,67 +13,67 @@ const CompanyShowcase = () => {
     {
       name: "TechCorp",
       logo: techCorpLogo,
-      description: "Leading technology company focused on innovation and cutting-edge solutions.",
+      description: "Führendes Technologieunternehmen mit Fokus auf Innovation und modernste Lösungen.",
       rating: 4.8,
       employees: "10,000+",
-      location: "San Francisco, CA",
+      location: "Berlin, Deutschland",
       openJobs: 45,
-      benefits: ["Remote Work", "Great Benefits", "Stock Options"],
+      benefits: ["Remote Work", "Tolle Benefits", "Aktienoptionen"],
       color: "from-blue-500 to-purple-600"
     },
     {
       name: "InnovateCo",
       logo: innovateCoLogo,
-      description: "Fast-growing startup revolutionizing the way people work and collaborate.",
+      description: "Schnell wachsendes Startup, das die Art revolutioniert, wie Menschen arbeiten und zusammenarbeiten.",
       rating: 4.6,
       employees: "500-1000",
-      location: "New York, NY",
+      location: "München, Deutschland",
       openJobs: 23,
-      benefits: ["Flexible Hours", "Learning Budget", "Health Insurance"],
+      benefits: ["Flexible Arbeitszeiten", "Weiterbildungsbudget", "Krankenversicherung"],
       color: "from-green-500 to-teal-600"
     },
     {
       name: "DesignStudio",
       logo: designStudioLogo,
-      description: "Creative agency specializing in digital experiences and brand design.",
+      description: "Kreativagentur spezialisiert auf digitale Erlebnisse und Markendesign.",
       rating: 4.7,
       employees: "50-100",
-      location: "Los Angeles, CA",
+      location: "Hamburg, Deutschland",
       openJobs: 12,
-      benefits: ["Creative Freedom", "Remote First", "Unlimited PTO"],
+      benefits: ["Kreative Freiheit", "Remote First", "Unbegrenzter Urlaub"],
       color: "from-pink-500 to-red-600"
     },
     {
       name: "DataFlow",
       logo: dataFlowLogo,
-      description: "Data analytics platform helping businesses make data-driven decisions.",
+      description: "Datenanalyseplattform, die Unternehmen bei datengesteuerten Entscheidungen hilft.",
       rating: 4.9,
       employees: "200-500",
-      location: "Austin, TX",
+      location: "Frankfurt, Deutschland",
       openJobs: 18,
-      benefits: ["Work-Life Balance", "Growth Opportunities", "Competitive Pay"],
+      benefits: ["Work-Life-Balance", "Wachstumsmöglichkeiten", "Wettbewerbsfähiges Gehalt"],
       color: "from-yellow-500 to-orange-600"
     },
     {
       name: "GrowthLabs",
       logo: growthLabsLogo,
-      description: "Marketing technology company focused on helping businesses scale.",
+      description: "Marketing-Technologieunternehmen mit Fokus auf Unternehmenswachstum.",
       rating: 4.5,
       employees: "100-200",
-      location: "Chicago, IL",
+      location: "Köln, Deutschland",
       openJobs: 15,
-      benefits: ["Professional Development", "Team Events", "Flexible PTO"],
+      benefits: ["Berufliche Entwicklung", "Team Events", "Flexibler Urlaub"],
       color: "from-indigo-500 to-blue-600"
     },
     {
       name: "CloudTech",
       logo: cloudTechLogo,
-      description: "Cloud infrastructure provider serving enterprise clients worldwide.",
+      description: "Cloud-Infrastrukturanbieter für Unternehmenskunden weltweit.",
       rating: 4.8,
       employees: "1000-5000",
-      location: "Seattle, WA",
+      location: "Stuttgart, Deutschland",
       openJobs: 34,
-      benefits: ["Equity Package", "Remote Work", "Learning & Development"],
+      benefits: ["Aktienpaket", "Remote Work", "Lernen & Entwicklung"],
       color: "from-teal-500 to-cyan-600"
     }
   ];
@@ -86,13 +86,13 @@ const CompanyShowcase = () => {
             <div className="text-center lg:text-left">
               <div className="job-chip mx-auto lg:mx-0 mb-4">
                 <span className="inline-flex items-center justify-center w-5 h-5 rounded-full bg-pulse-500 text-white mr-2">04</span>
-                <span>Top Companies</span>
+                <span>Top Unternehmen</span>
               </div>
               <h2 className="text-3xl sm:text-4xl font-display font-bold mb-4">
-                Work at Amazing Companies
+                Arbeiten Sie bei fantastischen Unternehmen
               </h2>
               <p className="text-lg text-gray-600 max-w-2xl">
-                Join industry-leading companies that are shaping the future and offer exceptional career opportunities.
+                Schließen Sie sich branchenführenden Unternehmen an, die die Zukunft gestalten und außergewöhnliche Karrieremöglichkeiten bieten.
               </p>
             </div>
             <div className="hidden lg:block">
@@ -128,7 +128,7 @@ const CompanyShowcase = () => {
                     </div>
                     <div className="text-right">
                       <div className="text-lg font-bold text-pulse-600">{company.openJobs}</div>
-                      <div className="text-sm text-gray-600">open jobs</div>
+                      <div className="text-sm text-gray-600">offene Jobs</div>
                     </div>
                   </div>
 
@@ -139,7 +139,7 @@ const CompanyShowcase = () => {
                   <div className="space-y-2 mb-4">
                     <div className="flex items-center gap-2 text-sm text-gray-600">
                       <Users className="h-4 w-4" />
-                      <span>{company.employees} employees</span>
+                      <span>{company.employees} Mitarbeiter</span>
                     </div>
                     <div className="flex items-center gap-2 text-sm text-gray-600">
                       <MapPin className="h-4 w-4" />
@@ -160,7 +160,7 @@ const CompanyShowcase = () => {
 
                   <div className="flex items-center justify-between">
                     <button className="text-pulse-600 hover:text-pulse-700 font-medium text-sm flex items-center gap-1 group-hover:gap-2 transition-all">
-                      View Jobs
+                      Jobs Anzeigen
                       <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
                     </button>
                     
@@ -175,7 +175,7 @@ const CompanyShowcase = () => {
 
           <div className="text-center mt-8 sm:mt-12">
             <button className="bg-white border border-pulse-500 text-pulse-500 hover:bg-pulse-500 hover:text-white px-8 py-3 rounded-lg font-medium transition-all duration-300">
-              View All Companies
+              Alle Unternehmen Anzeigen
             </button>
           </div>
         </div>

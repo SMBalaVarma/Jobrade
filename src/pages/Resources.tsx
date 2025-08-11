@@ -70,8 +70,8 @@ const Resources = () => {
         {/* Header */}
         <div className="bg-white border-b">
           <div className="container mx-auto px-6 py-8">
-            <h1 className="text-3xl font-bold text-gray-900 mb-4">Career Resources</h1>
-            <p className="text-gray-600">Free tools, guides, and advice to accelerate your career</p>
+            <h1 className="text-3xl font-bold text-gray-900 mb-4">Karriere-Ressourcen</h1>
+            <p className="text-gray-600">Kostenlose Tools, Leitfäden und Beratung zur Beschleunigung Ihrer Karriere</p>
           </div>
         </div>
 

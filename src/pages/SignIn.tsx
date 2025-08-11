@@ -34,14 +34,14 @@ const SignIn = () => {
           <div className="max-w-md mx-auto">
             <div className="bg-white rounded-lg shadow-sm border border-gray-200 p-8">
               <div className="text-center mb-8">
-                <h1 className="text-2xl font-bold text-gray-900 mb-2">Welcome Back</h1>
-                <p className="text-gray-600">Sign in to your JobSearch Pro account</p>
+                <h1 className="text-2xl font-bold text-gray-900 mb-2">Willkommen zurück</h1>
+                <p className="text-gray-600">Melden Sie sich in Ihr Jobard.de Konto an</p>
               </div>
 
               <form onSubmit={handleSubmit} className="space-y-6">
                 <div>
                   <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">
-                    Email Address
+                    E-Mail Adresse
                   </label>
                   <input
                     type="email"
@@ -50,14 +50,14 @@ const SignIn = () => {
                     value={formData.email}
                     onChange={handleInputChange}
                     className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-pulse-500 focus:border-transparent"
-                    placeholder="Enter your email"
+                    placeholder="Geben Sie Ihre E-Mail ein"
                     required
                   />
                 </div>
 
                 <div>
                   <label htmlFor="password" className="block text-sm font-medium text-gray-700 mb-2">
-                    Password
+                    Passwort
                   </label>
                   <div className="relative">
                     <input
@@ -67,7 +67,7 @@ const SignIn = () => {
                       value={formData.password}
                       onChange={handleInputChange}
                       className="w-full px-4 py-3 pr-12 border border-gray-300 rounded-lg focus:ring-2 focus:ring-pulse-500 focus:border-transparent"
-                      placeholder="Enter your password"
+                      placeholder="Geben Sie Ihr Passwort ein"
                       required
                     />
                     <button
@@ -89,10 +89,10 @@ const SignIn = () => {
                       onChange={handleInputChange}
                       className="rounded border-gray-300 text-pulse-500 focus:ring-pulse-500"
                     />
-                    <span className="ml-2 text-sm text-gray-600">Remember me</span>
+                    <span className="ml-2 text-sm text-gray-600">Angemeldet bleiben</span>
                   </label>
                   <a href="#" className="text-sm text-pulse-500 hover:text-pulse-600">
-                    Forgot password?
+                    Passwort vergessen?
                   </a>
                 </div>
 
@@ -100,7 +100,7 @@ const SignIn = () => {
                   type="submit"
                   className="w-full bg-pulse-500 hover:bg-pulse-600 text-white py-3 rounded-lg font-medium transition-colors"
                 >
-                  Sign In
+                  Anmelden
                 </button>
               </form>
 
@@ -110,7 +110,7 @@ const SignIn = () => {
                     <div className="w-full border-t border-gray-300" />
                   </div>
                   <div className="relative flex justify-center text-sm">
-                    <span className="px-2 bg-white text-gray-500">Or continue with</span>
+                    <span className="px-2 bg-white text-gray-500">Oder fortfahren mit</span>
                   </div>
                 </div>
 
@@ -126,9 +126,9 @@ const SignIn = () => {
 
               <div className="mt-8 text-center">
                 <p className="text-sm text-gray-600">
-                  Don't have an account?{" "}
+                  Haben Sie noch kein Konto?{" "}
                   <a href="#" className="text-pulse-500 hover:text-pulse-600 font-medium">
-                    Sign up for free
+                    Kostenlos registrieren
                   </a>
                 </p>
               </div>
@@ -136,9 +136,9 @@ const SignIn = () => {
 
             <div className="mt-8 text-center">
               <p className="text-xs text-gray-500">
-                By signing in, you agree to our{" "}
-                <a href="#" className="text-pulse-500 hover:text-pulse-600">Terms of Service</a> and{" "}
-                <a href="#" className="text-pulse-500 hover:text-pulse-600">Privacy Policy</a>
+                Mit der Anmeldung stimmen Sie unseren{" "}
+                <a href="#" className="text-pulse-500 hover:text-pulse-600">Nutzungsbedingungen</a> und{" "}
+                <a href="#" className="text-pulse-500 hover:text-pulse-600">Datenschutzrichtlinien</a> zu
               </p>
             </div>
           </div>
