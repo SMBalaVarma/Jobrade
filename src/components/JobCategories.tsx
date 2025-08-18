@@ -1,71 +1,91 @@
 import React from "react";
 import { ArrowRight } from "lucide-react";
+import { useNavigate } from "react-router-dom";
 import jobCategoriesIllustration from "/assets/job-categories.webp";
 
 const JobCategories = () => {
+  const navigate = useNavigate();
+  
   const categories = [
     {
       title: "Technologie",
       description: "Softwareentwicklung, IT und Ingenieurwesen",
       jobCount: "2,847",
       icon: "💻",
-      color: "from-blue-500 to-purple-600"
+      color: "from-blue-500 to-purple-600",
+      link: "/technology"
+    },
+    {
+      title: "Softwareentwicklung",
+      description: "Frontend, Backend und Full-Stack Development", 
+      jobCount: "1,542",
+      icon: "⚡",
+      color: "from-cyan-500 to-blue-600",
+      link: "/software-development"
+    },
+    {
+      title: "IT und Ingenieurwesen", 
+      description: "Systemadministration, Netzwerk und Infrastructure",
+      jobCount: "1,305",
+      icon: "🛠️",
+      color: "from-emerald-500 to-green-600",
+      link: "/it-engineering"
     },
     {
       title: "Gesundheitswesen",
       description: "Medizin, Pflege und Gesundheitsverwaltung",
       jobCount: "1,923",
       icon: "🏥",
-      color: "from-green-500 to-teal-600"
+      color: "from-green-500 to-teal-600",
+      link: "/healthcare"
     },
     {
       title: "Finanzen",
       description: "Banking, Buchhaltung und Finanzdienstleistungen",
       jobCount: "1,456",
       icon: "💰",
-      color: "from-yellow-500 to-orange-600"
+      color: "from-yellow-500 to-orange-600",
+      link: "/finance"
     },
     {
       title: "Marketing",
       description: "Digitales Marketing, Markenmanagement und Werbung",
       jobCount: "1,234",
       icon: "📊",
-      color: "from-pink-500 to-red-600"
+      color: "from-pink-500 to-red-600",
+      link: "/marketing"
     },
     {
       title: "Vertrieb",
       description: "Innendienst, Geschäftsentwicklung und Kundenbetreuung",
       jobCount: "1,098",
       icon: "🛍️",
-      color: "from-indigo-500 to-blue-600"
+      color: "from-indigo-500 to-blue-600",
+      link: "/sales"
     },
     {
       title: "Bildung",
       description: "Lehre, Ausbildung und Bildungsverwaltung",
       jobCount: "876",
       icon: "📚",
-      color: "from-purple-500 to-pink-600"
+      color: "from-purple-500 to-pink-600",
+      link: "/education"
     },
     {
       title: "Kundendienst",
       description: "Support, Betreuung und Kundenerfahrung",
       jobCount: "743",
       icon: "🎧",
-      color: "from-teal-500 to-cyan-600"
+      color: "from-teal-500 to-cyan-600",
+      link: "/customer-service"
     },
     {
       title: "Personalwesen",
       description: "Recruiting, Talentmanagement und HR-Operationen",
       jobCount: "564",
       icon: "👥",
-      color: "from-orange-500 to-red-600"
-    },
-    {
-      title: "Operations",
-      description: "Projektmanagement, Logistik und Geschäftsabläufe",
-      jobCount: "487",
-      icon: "⚙️",
-      color: "from-gray-500 to-gray-700"
+      color: "from-orange-500 to-red-600",
+      link: "/human-resources"
     }
   ];
 
@@ -95,36 +115,38 @@ const JobCategories = () => {
             </div>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 gap-4 sm:gap-6">
             {categories.map((category, index) => (
               <div
                 key={category.title}
                 className="group bg-white rounded-xl shadow-elegant hover:shadow-elegant-hover transition-all duration-300 hover:translate-y-[-4px] overflow-hidden cursor-pointer"
+                onClick={() => category.link && navigate(category.link)}
               >
-                <div className="p-6">
-                  <div className="flex items-center justify-between mb-4">
-                    <div className="text-3xl">{category.icon}</div>
+                <div className="p-4 sm:p-6">
+                  <div className="flex items-center justify-between mb-3 sm:mb-4">
+                    <div className="text-2xl sm:text-3xl">{category.icon}</div>
                     <div className="text-right">
-                      <div className="text-2xl font-bold text-gray-800">{category.jobCount}</div>
-                      <div className="text-sm text-gray-600">offene Stellen</div>
+                      <div className="text-lg sm:text-2xl font-bold text-gray-800">{category.jobCount}</div>
+                      <div className="text-xs sm:text-sm text-gray-600 whitespace-nowrap">offene Stellen</div>
                     </div>
                   </div>
                   
-                  <h3 className="text-xl font-semibold text-gray-800 mb-2 group-hover:text-pulse-600 transition-colors">
+                  <h3 className="text-lg sm:text-xl font-semibold text-gray-800 mb-2 group-hover:text-pulse-600 transition-colors">
                     {category.title}
                   </h3>
                   
-                  <p className="text-gray-600 text-sm mb-4">
+                  <p className="text-gray-600 text-xs sm:text-sm mb-3 sm:mb-4 line-clamp-2 leading-relaxed">
                     {category.description}
                   </p>
 
                   <div className="flex items-center justify-between">
-                    <button className="text-pulse-600 hover:text-pulse-700 font-medium text-sm flex items-center gap-1 group-hover:gap-2 transition-all">
-                      Jobs Durchsuchen
-                      <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
+                    <button className="text-pulse-600 hover:text-pulse-700 font-medium text-xs sm:text-sm flex items-center gap-1 group-hover:gap-2 transition-all">
+                      <span className="hidden sm:inline">Jobs Durchsuchen</span>
+                      <span className="sm:hidden">Durchsuchen</span>
+                      <ArrowRight className="h-3 w-3 sm:h-4 sm:w-4 transition-transform group-hover:translate-x-1" />
                     </button>
                     
-                    <div className={`w-8 h-1 bg-gradient-to-r ${category.color} rounded-full`}></div>
+                    <div className={`w-6 sm:w-8 h-1 bg-gradient-to-r ${category.color} rounded-full`}></div>
                   </div>
                 </div>
                 

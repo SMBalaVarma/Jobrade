@@ -119,52 +119,52 @@ const FeaturedJobs = () => {
             </div>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
             {featuredJobs.map((job) => (
               <div
                 key={job.id}
                 className="bg-white rounded-xl shadow-elegant hover:shadow-elegant-hover transition-all duration-300 hover:translate-y-[-2px] overflow-hidden"
               >
-                <div className="p-6">
-                  <div className="flex items-start justify-between mb-4">
-                    <div className="flex items-center gap-3">
+                <div className="p-4 sm:p-6">
+                  <div className="flex items-start justify-between mb-3 sm:mb-4">
+                    <div className="flex items-center gap-2 sm:gap-3 flex-1 min-w-0">
                       <img 
                         src={job.logo} 
                         alt={`${job.company} logo`}
-                        className="w-12 h-12 rounded-lg object-cover shadow-md"
+                        className="w-10 h-10 sm:w-12 sm:h-12 rounded-lg object-cover shadow-md flex-shrink-0"
                       />
-                      <div>
-                        <h3 className="font-semibold text-lg text-gray-800">{job.title}</h3>
-                        <p className="text-gray-600">{job.company}</p>
+                      <div className="min-w-0 flex-1">
+                        <h3 className="font-semibold text-base sm:text-lg text-gray-800 truncate">{job.title}</h3>
+                        <p className="text-gray-600 text-sm truncate">{job.company}</p>
                       </div>
                     </div>
-                    <button className="text-gray-400 hover:text-pulse-500 transition-colors">
-                      <Bookmark className="h-5 w-5" />
+                    <button className="text-gray-400 hover:text-pulse-500 transition-colors flex-shrink-0 ml-2">
+                      <Bookmark className="h-4 w-4 sm:h-5 sm:w-5" />
                     </button>
                   </div>
 
-                  <div className="flex items-center gap-4 text-sm text-gray-600 mb-4">
+                  <div className="flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-4 text-xs sm:text-sm text-gray-600 mb-3 sm:mb-4">
                     <div className="flex items-center gap-1">
-                      <MapPin className="h-4 w-4" />
-                      {job.location}
+                      <MapPin className="h-3 w-3 sm:h-4 sm:w-4 flex-shrink-0" />
+                      <span className="truncate">{job.location}</span>
                     </div>
                     <div className="flex items-center gap-1">
-                      <Clock className="h-4 w-4" />
-                      {job.type}
+                      <Clock className="h-3 w-3 sm:h-4 sm:w-4 flex-shrink-0" />
+                      <span>{job.type}</span>
                     </div>
                   </div>
 
-                  <div className="flex items-center gap-1 text-pulse-600 font-semibold mb-4">
-                    <DollarSign className="h-4 w-4" />
-                    {job.salary}
+                  <div className="flex items-center gap-1 text-pulse-600 font-semibold mb-3 sm:mb-4 text-sm sm:text-base">
+                    <DollarSign className="h-3 w-3 sm:h-4 sm:w-4 flex-shrink-0" />
+                    <span className="truncate">{job.salary}</span>
                   </div>
 
-                  <p className="text-gray-700 text-sm mb-4 line-clamp-2">
+                  <p className="text-gray-700 text-xs sm:text-sm mb-3 sm:mb-4 line-clamp-2 leading-relaxed">
                     {job.description}
                   </p>
 
-                  <div className="flex flex-wrap gap-2 mb-4">
-                    {job.tags.map((tag) => (
+                  <div className="flex flex-wrap gap-1.5 sm:gap-2 mb-3 sm:mb-4">
+                    {job.tags.slice(0, 3).map((tag) => (
                       <span
                         key={tag}
                         className="px-2 py-1 bg-pulse-50 text-pulse-600 text-xs rounded-full"
@@ -172,15 +172,20 @@ const FeaturedJobs = () => {
                         {tag}
                       </span>
                     ))}
+                    {job.tags.length > 3 && (
+                      <span className="px-2 py-1 bg-gray-50 text-gray-600 text-xs rounded-full">
+                        +{job.tags.length - 3}
+                      </span>
+                    )}
                   </div>
 
                   <div className="flex items-center justify-between">
-                    <span className="text-sm text-gray-500">{job.posted}</span>
+                    <span className="text-xs sm:text-sm text-gray-500">{job.posted}</span>
                     <Link 
                       to={`/job/${job.id}`}
-                      className="bg-pulse-500 hover:bg-pulse-600 text-white px-4 py-2 rounded-lg text-sm font-medium transition-colors inline-block"
+                      className="bg-pulse-500 hover:bg-pulse-600 text-white px-3 sm:px-4 py-1.5 sm:py-2 rounded-lg text-xs sm:text-sm font-medium transition-colors inline-block"
                     >
-                      Jetzt Bewerben
+                      Bewerben
                     </Link>
                   </div>
                 </div>

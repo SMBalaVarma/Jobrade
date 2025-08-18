@@ -121,32 +121,32 @@ const BrowseJobs = () => {
       <Navbar />
       
       {/* Breadcrumb */}
-      <div className="border-b bg-muted/30">
-        <div className="container mx-auto px-6 py-4">
-          <nav className="text-sm text-muted-foreground">
+      <div className="border-b bg-muted/30 pt-16 sm:pt-20 md:pt-24">
+        <div className="container mx-auto px-4 sm:px-6 py-3 sm:py-4">
+          <nav className="text-xs sm:text-sm text-muted-foreground">
             Startseite › <span className="text-foreground">Suchergebnisse</span>
           </nav>
         </div>
       </div>
 
-      <div className="container mx-auto px-6 py-8">
-        <div className="flex flex-col xl:flex-row gap-8">
+      <div className="container mx-auto px-4 sm:px-6 py-4 sm:py-8">
+        <div className="flex flex-col lg:flex-row gap-4 sm:gap-6 lg:gap-8">
           {/* Sidebar Filters */}
-          <div className="xl:w-80 space-y-6">
+          <div className="lg:w-80 space-y-4 sm:space-y-6">
             
             {/* Location Filter */}
-            <div className="bg-card rounded-lg border p-6">
-              <h3 className="font-semibold text-lg mb-4 text-foreground">Standort</h3>
-              <div className="space-y-4">
+            <div className="bg-card rounded-lg border p-4 sm:p-6">
+              <h3 className="font-semibold text-base sm:text-lg mb-3 sm:mb-4 text-foreground">Standort</h3>
+              <div className="space-y-3 sm:space-y-4">
                 <div className="relative">
-                  <MapPin className="absolute left-3 top-3 h-4 w-4 text-muted-foreground" />
+                  <MapPin className="absolute left-3 top-2.5 sm:top-3 h-4 w-4 text-muted-foreground" />
                   <Input 
                     placeholder="Standort eingeben" 
-                    className="pl-10"
+                    className="pl-10 text-sm sm:text-base py-2 sm:py-3"
                   />
                 </div>
                 <div>
-                  <label className="text-sm font-medium text-foreground mb-2 block">
+                  <label className="text-xs sm:text-sm font-medium text-foreground mb-2 block">
                     Im Umkreis von: {radiusRange[0]} km
                   </label>
                   <Slider
@@ -165,9 +165,9 @@ const BrowseJobs = () => {
             </div>
 
             {/* Job Type Filter */}
-            <div className="bg-card rounded-lg border p-6">
-              <h3 className="font-semibold text-lg mb-4 text-foreground">Arbeitstyp</h3>
-              <div className="space-y-3">
+            <div className="bg-card rounded-lg border p-4 sm:p-6">
+              <h3 className="font-semibold text-base sm:text-lg mb-3 sm:mb-4 text-foreground">Arbeitstyp</h3>
+              <div className="space-y-2 sm:space-y-3">
                 {jobTypes.map((type) => (
                   <label key={type} className="flex items-center cursor-pointer group">
                     <div className="relative">
@@ -175,11 +175,11 @@ const BrowseJobs = () => {
                         type="checkbox" 
                         className="sr-only"
                       />
-                      <div className="w-5 h-5 border-2 border-border rounded transition-colors group-hover:border-primary">
+                      <div className="w-4 h-4 sm:w-5 sm:h-5 border-2 border-border rounded transition-colors group-hover:border-primary">
                         <div className="w-full h-full bg-primary rounded-sm scale-0 transition-transform" />
                       </div>
                     </div>
-                    <span className="ml-3 text-sm text-foreground group-hover:text-primary transition-colors">
+                    <span className="ml-2 sm:ml-3 text-xs sm:text-sm text-foreground group-hover:text-primary transition-colors">
                       {type}
                     </span>
                   </label>
@@ -188,18 +188,18 @@ const BrowseJobs = () => {
             </div>
 
             {/* Date Posted Filter */}
-            <div className="bg-card rounded-lg border p-6">
-              <h3 className="font-semibold text-lg mb-4 text-foreground">Veröffentlichungsdatum</h3>
-              <div className="space-y-3">
+            <div className="bg-card rounded-lg border p-4 sm:p-6">
+              <h3 className="font-semibold text-base sm:text-lg mb-3 sm:mb-4 text-foreground">Veröffentlichungsdatum</h3>
+              <div className="space-y-2 sm:space-y-3">
                 {datePosted.map((option) => (
                   <label key={option} className="flex items-center cursor-pointer group">
                     <input 
                       type="radio" 
                       name="datePosted"
-                      className="w-4 h-4 text-primary border-border focus:ring-primary"
+                      className="w-3 h-3 sm:w-4 sm:h-4 text-primary border-border focus:ring-primary"
                       defaultChecked={option === "Any"}
                     />
-                    <span className="ml-3 text-sm text-foreground group-hover:text-primary transition-colors">
+                    <span className="ml-2 sm:ml-3 text-xs sm:text-sm text-foreground group-hover:text-primary transition-colors">
                       {option}
                     </span>
                   </label>
@@ -208,16 +208,16 @@ const BrowseJobs = () => {
             </div>
 
             {/* Experience Level */}
-            <div className="bg-card rounded-lg border p-6">
-              <h3 className="font-semibold text-lg mb-4 text-foreground">Erfahrungslevel</h3>
-              <div className="space-y-3">
+            <div className="bg-card rounded-lg border p-4 sm:p-6">
+              <h3 className="font-semibold text-base sm:text-lg mb-3 sm:mb-4 text-foreground">Erfahrungslevel</h3>
+              <div className="space-y-2 sm:space-y-3">
                 {experienceLevels.map((level) => (
                   <label key={level} className="flex items-center cursor-pointer group">
                     <input 
                       type="checkbox" 
-                      className="w-4 h-4 text-primary border-border rounded focus:ring-primary"
+                      className="w-3 h-3 sm:w-4 sm:h-4 text-primary border-border rounded focus:ring-primary"
                     />
-                    <span className="ml-3 text-sm text-foreground group-hover:text-primary transition-colors">
+                    <span className="ml-2 sm:ml-3 text-xs sm:text-sm text-foreground group-hover:text-primary transition-colors">
                       {level}
                     </span>
                   </label>
@@ -226,10 +226,10 @@ const BrowseJobs = () => {
             </div>
 
             {/* Salary Range */}
-            <div className="bg-card rounded-lg border p-6">
-              <h3 className="font-semibold text-lg mb-4 text-foreground">Gehaltsbereich</h3>
-              <div className="space-y-4">
-                <label className="text-sm font-medium text-foreground">
+            <div className="bg-card rounded-lg border p-4 sm:p-6">
+              <h3 className="font-semibold text-base sm:text-lg mb-3 sm:mb-4 text-foreground">Gehaltsbereich</h3>
+              <div className="space-y-3 sm:space-y-4">
+                <label className="text-xs sm:text-sm font-medium text-foreground">
                   Bis zu {salaryRange[0]}k € pro Jahr
                 </label>
                 <Slider
@@ -247,14 +247,14 @@ const BrowseJobs = () => {
             </div>
 
             {/* Popular Tags */}
-            <div className="bg-card rounded-lg border p-6">
-              <h3 className="font-semibold text-lg mb-4 text-foreground">Tags</h3>
-              <div className="flex flex-wrap gap-2">
+            <div className="bg-card rounded-lg border p-4 sm:p-6">
+              <h3 className="font-semibold text-base sm:text-lg mb-3 sm:mb-4 text-foreground">Tags</h3>
+              <div className="flex flex-wrap gap-1.5 sm:gap-2">
                 {popularTags.map((tag) => (
                   <Badge 
                     key={tag} 
                     variant="secondary"
-                    className="cursor-pointer hover:bg-primary hover:text-primary-foreground transition-colors"
+                    className="cursor-pointer hover:bg-primary hover:text-primary-foreground transition-colors text-xs sm:text-sm px-2 py-1"
                   >
                     {tag}
                   </Badge>
@@ -263,19 +263,19 @@ const BrowseJobs = () => {
             </div>
 
             {/* Recruiting CTA */}
-            <div className="bg-gradient-to-br from-primary/10 to-primary/5 rounded-lg border p-6 text-center">
-              <div className="mb-4">
-                <div className="w-16 h-16 bg-primary/20 rounded-full flex items-center justify-center mx-auto mb-3">
-                  <Star className="h-8 w-8 text-primary" />
+            <div className="bg-gradient-to-br from-primary/10 to-primary/5 rounded-lg border p-4 sm:p-6 text-center">
+              <div className="mb-3 sm:mb-4">
+                <div className="w-12 h-12 sm:w-16 sm:h-16 bg-primary/20 rounded-full flex items-center justify-center mx-auto mb-2 sm:mb-3">
+                  <Star className="h-6 w-6 sm:h-8 sm:w-8 text-primary" />
                 </div>
-                <h3 className="font-semibold text-foreground mb-2">
+                <h3 className="font-semibold text-foreground mb-2 text-sm sm:text-base">
                   Recruiting?
                 </h3>
-                <p className="text-sm text-muted-foreground mb-4">
+                <p className="text-xs sm:text-sm text-muted-foreground mb-3 sm:mb-4">
                   Bewerben Sie Ihre Jobs bei Millionen von monatlichen Nutzern
                 </p>
               </div>
-              <Button className="w-full">
+              <Button className="w-full text-sm sm:text-base py-2 sm:py-3">
                 Jetzt Starten
               </Button>
             </div>
@@ -284,10 +284,10 @@ const BrowseJobs = () => {
           {/* Main Content */}
           <div className="flex-1">
             {/* Search Header */}
-            <div className="bg-card rounded-lg border p-6 mb-6">
-              <div className="grid lg:grid-cols-2 gap-8 items-center mb-6">
+            <div className="bg-card rounded-lg border p-4 sm:p-6 mb-4 sm:mb-6">
+              <div className="grid lg:grid-cols-2 gap-4 sm:gap-6 lg:gap-8 items-center mb-4 sm:mb-6">
                 <div>
-                  <h1 className="text-2xl font-bold text-foreground mb-4">Suchergebnisse</h1>
+                  <h1 className="text-xl sm:text-2xl font-bold text-foreground mb-2 sm:mb-4">Suchergebnisse</h1>
                 </div>
                 <div className="hidden lg:block">
                   <img 
@@ -299,37 +299,37 @@ const BrowseJobs = () => {
               </div>
               
               {/* Search Bar */}
-              <div className="flex flex-col sm:flex-row gap-4 mb-6">
+              <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 mb-4 sm:mb-6">
                 <div className="flex-1 relative">
-                  <Search className="absolute left-3 top-3 h-4 w-4 text-muted-foreground" />
+                  <Search className="absolute left-3 top-2.5 sm:top-3 h-4 w-4 text-muted-foreground" />
                   <Input 
                     placeholder="Jobtitel, Schlüsselwörter oder Unternehmen" 
-                    className="pl-10"
+                    className="pl-10 text-sm sm:text-base py-2 sm:py-3"
                   />
                 </div>
                 <div className="flex-1 relative">
-                  <MapPin className="absolute left-3 top-3 h-4 w-4 text-muted-foreground" />
+                  <MapPin className="absolute left-3 top-2.5 sm:top-3 h-4 w-4 text-muted-foreground" />
                   <Input 
                     placeholder="Stadt, Bundesland oder remote" 
-                    className="pl-10"
+                    className="pl-10 text-sm sm:text-base py-2 sm:py-3"
                   />
                 </div>
-                <Button size="lg" className="px-8">
+                <Button size="lg" className="px-4 sm:px-8 text-sm sm:text-base py-2 sm:py-3">
                   Jobs Suchen
                 </Button>
               </div>
 
               {/* Results Info and Sort */}
-              <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4">
-                <p className="text-muted-foreground">
+              <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-3 sm:gap-4">
+                <p className="text-muted-foreground text-sm">
                   Zeige 1-{jobs.length} von 243 Jobs
                 </p>
-                <div className="flex items-center gap-2">
-                  <span className="text-sm text-muted-foreground">Sortieren nach:</span>
-                  <div className="flex bg-muted rounded-lg p-1">
+                <div className="flex items-center gap-2 w-full sm:w-auto">
+                  <span className="text-xs sm:text-sm text-muted-foreground">Sortieren nach:</span>
+                  <div className="flex bg-muted rounded-lg p-1 flex-1 sm:flex-initial">
                     <button
                       onClick={() => setActiveSort("newest")}
-                      className={`px-3 py-1 text-sm rounded transition-colors ${
+                      className={`px-2 sm:px-3 py-1 text-xs sm:text-sm rounded transition-colors flex-1 sm:flex-initial text-center ${
                         activeSort === "newest" 
                           ? "bg-background text-foreground shadow-sm" 
                           : "text-muted-foreground hover:text-foreground"
@@ -339,7 +339,7 @@ const BrowseJobs = () => {
                     </button>
                     <button
                       onClick={() => setActiveSort("oldest")}
-                      className={`px-3 py-1 text-sm rounded transition-colors ${
+                      className={`px-2 sm:px-3 py-1 text-xs sm:text-sm rounded transition-colors flex-1 sm:flex-initial text-center ${
                         activeSort === "oldest" 
                           ? "bg-background text-foreground shadow-sm" 
                           : "text-muted-foreground hover:text-foreground"
@@ -353,65 +353,66 @@ const BrowseJobs = () => {
             </div>
 
             {/* Job Listings */}
-            <div className="space-y-4">
+            <div className="space-y-3 sm:space-y-4">
               {jobs.map((job) => (
                 <div 
                   key={job.id} 
-                  className="bg-card rounded-lg border p-6 hover:shadow-lg transition-all duration-200 hover:border-primary/20 group cursor-pointer"
+                  className="bg-card rounded-lg border p-4 sm:p-6 hover:shadow-lg transition-all duration-200 hover:border-primary/20 group cursor-pointer"
                 >
-                  <div className="flex items-start gap-4">
+                  <div className="flex flex-col sm:flex-row items-start gap-3 sm:gap-4">
                     {/* Company Logo */}
                     <img 
                       src={job.logo} 
                       alt={`${job.company} logo`}
-                      className="w-12 h-12 rounded-lg object-cover shadow-md shrink-0"
+                      className="w-10 h-10 sm:w-12 sm:h-12 rounded-lg object-cover shadow-md shrink-0"
                     />
 
                     {/* Job Info */}
-                    <div className="flex-1 min-w-0">
-                      <div className="flex items-start justify-between mb-2">
-                        <div>
-                          <div className="flex items-center gap-2 mb-1">
-                            <h3 className="text-lg font-semibold text-foreground group-hover:text-primary transition-colors">
+                    <div className="flex-1 min-w-0 w-full">
+                      <div className="flex flex-col sm:flex-row sm:items-start justify-between mb-2 sm:mb-2 gap-2">
+                        <div className="flex-1 min-w-0">
+                          <div className="flex flex-col sm:flex-row sm:items-center gap-1 sm:gap-2 mb-1">
+                            <h3 className="text-base sm:text-lg font-semibold text-foreground group-hover:text-primary transition-colors truncate">
                               {job.title}
                             </h3>
                             {job.featured && (
-                              <Badge variant="secondary" className="bg-primary/10 text-primary">
+                              <Badge variant="secondary" className="bg-primary/10 text-primary text-xs w-fit">
                                 Empfohlen
                               </Badge>
                             )}
                           </div>
-                          <p className="text-muted-foreground font-medium">
+                          <p className="text-muted-foreground font-medium text-sm sm:text-base truncate">
                             {job.company}
                           </p>
                         </div>
-                        <div className="flex items-center gap-2 shrink-0">
-                          <Button variant="ghost" size="sm" className="text-muted-foreground hover:text-foreground">
-                            <Heart className="h-4 w-4" />
+                        <div className="flex items-center gap-2 shrink-0 w-full sm:w-auto justify-between sm:justify-end">
+                          <Button variant="ghost" size="sm" className="text-muted-foreground hover:text-foreground p-2">
+                            <Heart className="h-3 w-3 sm:h-4 sm:w-4" />
                           </Button>
-                          <Button asChild>
+                          <Button asChild size="sm" className="text-xs sm:text-sm px-3 sm:px-4">
                             <Link to={`/job/${job.id}`}>Jetzt Bewerben</Link>
                           </Button>
                         </div>
                       </div>
 
-                      <div className="flex flex-wrap items-center gap-4 text-sm text-muted-foreground mb-3">
+                      <div className="flex flex-wrap items-center gap-2 sm:gap-4 text-xs sm:text-sm text-muted-foreground mb-2 sm:mb-3">
                         <div className="flex items-center gap-1">
-                          <MapPin className="h-4 w-4" />
-                          {job.location}
+                          <MapPin className="h-3 w-3 sm:h-4 sm:w-4 shrink-0" />
+                          <span className="truncate">{job.location}</span>
                         </div>
                         <div className="flex items-center gap-1">
-                          <Clock className="h-4 w-4" />
-                          {job.type}
+                          <Clock className="h-3 w-3 sm:h-4 sm:w-4 shrink-0" />
+                          <span>{job.type}</span>
                         </div>
                         <div className="flex items-center gap-1">
-                          <DollarSign className="h-4 w-4" />
-                          {job.salary}
+                          <DollarSign className="h-3 w-3 sm:h-4 sm:w-4 shrink-0" />
+                          <span className="truncate">{job.salary}</span>
                         </div>
-                        <span>• {job.posted}</span>
+                        <span className="hidden sm:inline">• {job.posted}</span>
+                        <span className="sm:hidden text-xs">{job.posted}</span>
                       </div>
 
-                      <p className="text-muted-foreground text-sm leading-relaxed">
+                      <p className="text-muted-foreground text-xs sm:text-sm leading-relaxed line-clamp-2">
                         {job.description}
                       </p>
                     </div>
@@ -421,8 +422,8 @@ const BrowseJobs = () => {
             </div>
 
             {/* Load More */}
-            <div className="text-center mt-8">
-              <Button variant="outline" size="lg" className="px-8">
+            <div className="text-center mt-6 sm:mt-8">
+              <Button variant="outline" size="lg" className="px-6 sm:px-8 text-sm sm:text-base">
                 Mehr Jobs Anzeigen
               </Button>
             </div>

@@ -1,5 +1,6 @@
 import React from "react";
 import { ArrowRight, Star, Users, MapPin } from "lucide-react";
+import { Link } from "react-router-dom";
 import companyShowcase from "/assets/company-showcase.webp";
 import techCorpLogo from "/assets/logos/techcorp-logo.webp";
 import innovateCoLogo from "/assets/logos/innovateco-logo.webp";
@@ -19,7 +20,8 @@ const CompanyShowcase = () => {
       location: "Berlin, Deutschland",
       openJobs: 45,
       benefits: ["Remote Work", "Tolle Benefits", "Aktienoptionen"],
-      color: "from-blue-500 to-purple-600"
+      color: "from-blue-500 to-purple-600",
+      link: "/company/techcorp"
     },
     {
       name: "InnovateCo",
@@ -30,7 +32,8 @@ const CompanyShowcase = () => {
       location: "München, Deutschland",
       openJobs: 23,
       benefits: ["Flexible Arbeitszeiten", "Weiterbildungsbudget", "Krankenversicherung"],
-      color: "from-green-500 to-teal-600"
+      color: "from-green-500 to-teal-600",
+      link: "/company/innovateco"
     },
     {
       name: "DesignStudio",
@@ -41,7 +44,8 @@ const CompanyShowcase = () => {
       location: "Hamburg, Deutschland",
       openJobs: 12,
       benefits: ["Kreative Freiheit", "Remote First", "Unbegrenzter Urlaub"],
-      color: "from-pink-500 to-red-600"
+      color: "from-pink-500 to-red-600",
+      link: "/company/designstudio"
     },
     {
       name: "DataFlow",
@@ -52,7 +56,8 @@ const CompanyShowcase = () => {
       location: "Frankfurt, Deutschland",
       openJobs: 18,
       benefits: ["Work-Life-Balance", "Wachstumsmöglichkeiten", "Wettbewerbsfähiges Gehalt"],
-      color: "from-yellow-500 to-orange-600"
+      color: "from-yellow-500 to-orange-600",
+      link: "/company/dataflow"
     },
     {
       name: "GrowthLabs",
@@ -63,7 +68,8 @@ const CompanyShowcase = () => {
       location: "Köln, Deutschland",
       openJobs: 15,
       benefits: ["Berufliche Entwicklung", "Team Events", "Flexibler Urlaub"],
-      color: "from-indigo-500 to-blue-600"
+      color: "from-indigo-500 to-blue-600",
+      link: "/company/growthlabs"
     },
     {
       name: "CloudTech",
@@ -74,7 +80,8 @@ const CompanyShowcase = () => {
       location: "Stuttgart, Deutschland",
       openJobs: 34,
       benefits: ["Aktienpaket", "Remote Work", "Lernen & Entwicklung"],
-      color: "from-teal-500 to-cyan-600"
+      color: "from-teal-500 to-cyan-600",
+      link: "/company/cloudtech"
     }
   ];
 
@@ -104,51 +111,51 @@ const CompanyShowcase = () => {
             </div>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
             {companies.map((company, index) => (
               <div
                 key={company.name}
                 className="group bg-white rounded-xl shadow-elegant hover:shadow-elegant-hover transition-all duration-300 hover:translate-y-[-4px] overflow-hidden"
               >
-                <div className="p-6">
-                  <div className="flex items-start justify-between mb-4">
-                    <div className="flex items-center gap-3">
+                <div className="p-4 sm:p-6">
+                  <div className="flex items-start justify-between mb-3 sm:mb-4">
+                    <div className="flex items-center gap-2 sm:gap-3 flex-1 min-w-0">
                       <img 
                         src={company.logo} 
                         alt={`${company.name} logo`}
-                        className="w-12 h-12 rounded-lg object-cover shadow-md"
+                        className="w-10 h-10 sm:w-12 sm:h-12 rounded-lg object-cover shadow-md flex-shrink-0"
                       />
-                      <div>
-                        <h3 className="font-semibold text-lg text-gray-800">{company.name}</h3>
-                        <div className="flex items-center gap-1 text-sm text-gray-600">
-                          <Star className="h-4 w-4 fill-yellow-400 text-yellow-400" />
+                      <div className="min-w-0 flex-1">
+                        <h3 className="font-semibold text-base sm:text-lg text-gray-800 truncate">{company.name}</h3>
+                        <div className="flex items-center gap-1 text-xs sm:text-sm text-gray-600">
+                          <Star className="h-3 w-3 sm:h-4 sm:w-4 fill-yellow-400 text-yellow-400 flex-shrink-0" />
                           <span>{company.rating}</span>
                         </div>
                       </div>
                     </div>
-                    <div className="text-right">
-                      <div className="text-lg font-bold text-pulse-600">{company.openJobs}</div>
-                      <div className="text-sm text-gray-600">offene Jobs</div>
+                    <div className="text-right flex-shrink-0 ml-2">
+                      <div className="text-base sm:text-lg font-bold text-pulse-600">{company.openJobs}</div>
+                      <div className="text-xs sm:text-sm text-gray-600 whitespace-nowrap">offene Jobs</div>
                     </div>
                   </div>
 
-                  <p className="text-gray-700 text-sm mb-4">
+                  <p className="text-gray-700 text-xs sm:text-sm mb-3 sm:mb-4 line-clamp-2 leading-relaxed">
                     {company.description}
                   </p>
 
-                  <div className="space-y-2 mb-4">
-                    <div className="flex items-center gap-2 text-sm text-gray-600">
-                      <Users className="h-4 w-4" />
-                      <span>{company.employees} Mitarbeiter</span>
+                  <div className="space-y-1.5 sm:space-y-2 mb-3 sm:mb-4">
+                    <div className="flex items-center gap-2 text-xs sm:text-sm text-gray-600">
+                      <Users className="h-3 w-3 sm:h-4 sm:w-4 flex-shrink-0" />
+                      <span className="truncate">{company.employees} Mitarbeiter</span>
                     </div>
-                    <div className="flex items-center gap-2 text-sm text-gray-600">
-                      <MapPin className="h-4 w-4" />
-                      <span>{company.location}</span>
+                    <div className="flex items-center gap-2 text-xs sm:text-sm text-gray-600">
+                      <MapPin className="h-3 w-3 sm:h-4 sm:w-4 flex-shrink-0" />
+                      <span className="truncate">{company.location}</span>
                     </div>
                   </div>
 
-                  <div className="flex flex-wrap gap-2 mb-4">
-                    {company.benefits.map((benefit) => (
+                  <div className="flex flex-wrap gap-1.5 sm:gap-2 mb-3 sm:mb-4">
+                    {company.benefits.slice(0, 2).map((benefit) => (
                       <span
                         key={benefit}
                         className="px-2 py-1 bg-pulse-50 text-pulse-600 text-xs rounded-full"
@@ -156,15 +163,24 @@ const CompanyShowcase = () => {
                         {benefit}
                       </span>
                     ))}
+                    {company.benefits.length > 2 && (
+                      <span className="px-2 py-1 bg-gray-50 text-gray-600 text-xs rounded-full">
+                        +{company.benefits.length - 2}
+                      </span>
+                    )}
                   </div>
 
                   <div className="flex items-center justify-between">
-                    <button className="text-pulse-600 hover:text-pulse-700 font-medium text-sm flex items-center gap-1 group-hover:gap-2 transition-all">
-                      Jobs Anzeigen
-                      <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
-                    </button>
+                    <Link 
+                      to={company.link}
+                      className="text-pulse-600 hover:text-pulse-700 font-medium text-xs sm:text-sm flex items-center gap-1 group-hover:gap-2 transition-all"
+                    >
+                      <span className="hidden sm:inline">Jobs Anzeigen</span>
+                      <span className="sm:hidden">Jobs</span>
+                      <ArrowRight className="h-3 w-3 sm:h-4 sm:w-4 transition-transform group-hover:translate-x-1" />
+                    </Link>
                     
-                    <div className={`w-8 h-1 bg-gradient-to-r ${company.color} rounded-full`}></div>
+                    <div className={`w-6 sm:w-8 h-1 bg-gradient-to-r ${company.color} rounded-full`}></div>
                   </div>
                 </div>
                 
@@ -174,9 +190,12 @@ const CompanyShowcase = () => {
           </div>
 
           <div className="text-center mt-8 sm:mt-12">
-            <button className="bg-white border border-pulse-500 text-pulse-500 hover:bg-pulse-500 hover:text-white px-8 py-3 rounded-lg font-medium transition-all duration-300">
+            <Link 
+              to="/companies"
+              className="bg-white border border-pulse-500 text-pulse-500 hover:bg-pulse-500 hover:text-white px-8 py-3 rounded-lg font-medium transition-all duration-300 inline-block"
+            >
               Alle Unternehmen Anzeigen
-            </button>
+            </Link>
           </div>
         </div>
       </div>

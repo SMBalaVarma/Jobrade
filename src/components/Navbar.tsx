@@ -84,13 +84,24 @@ const Navbar = () => {
 
       {/* Mobile Navigation - improved for better touch experience */}
       <div className={cn(
-        "fixed inset-0 z-40 bg-white flex flex-col pt-16 px-6 md:hidden transition-all duration-300 ease-in-out",
+        "fixed inset-0 z-50 bg-white/90 backdrop-blur-lg flex flex-col md:hidden transition-all duration-300 ease-in-out",
         isMenuOpen ? "opacity-100 translate-x-0" : "opacity-0 translate-x-full pointer-events-none"
       )}>
-        <nav className="flex flex-col space-y-6 items-center mt-8">
+        {/* Close button in mobile menu */}
+        <div className="flex justify-end p-4">
+          <button 
+            className="text-gray-700 p-2 focus:outline-none"
+            onClick={toggleMenu}
+            aria-label="Close menu"
+          >
+            <X size={24} />
+          </button>
+        </div>
+        
+        <nav className="flex flex-col space-y-4 items-center mt-4">
           <Link 
             to="/" 
-            className="text-xl font-medium py-3 px-6 w-full text-center rounded-lg hover:bg-gray-100" 
+            className="text-base font-medium py-2 px-4 w-full text-center rounded-lg hover:bg-muted/50 transition-colors" 
             onClick={() => {
               setIsMenuOpen(false);
               document.body.style.overflow = '';
@@ -100,7 +111,7 @@ const Navbar = () => {
           </Link>
           <Link 
             to="/browse-jobs" 
-            className="text-xl font-medium py-3 px-6 w-full text-center rounded-lg hover:bg-gray-100" 
+            className="text-base font-medium py-2 px-4 w-full text-center rounded-lg hover:bg-muted/50 transition-colors" 
             onClick={() => {
               setIsMenuOpen(false);
               document.body.style.overflow = '';
@@ -110,7 +121,7 @@ const Navbar = () => {
           </Link>
           <Link 
             to="/companies" 
-            className="text-xl font-medium py-3 px-6 w-full text-center rounded-lg hover:bg-gray-100" 
+            className="text-base font-medium py-2 px-4 w-full text-center rounded-lg hover:bg-muted/50 transition-colors" 
             onClick={() => {
               setIsMenuOpen(false);
               document.body.style.overflow = '';
@@ -120,7 +131,7 @@ const Navbar = () => {
           </Link>
           <Link 
             to="/resources" 
-            className="text-xl font-medium py-3 px-6 w-full text-center rounded-lg hover:bg-gray-100" 
+            className="text-base font-medium py-2 px-4 w-full text-center rounded-lg hover:bg-muted/50 transition-colors" 
             onClick={() => {
               setIsMenuOpen(false);
               document.body.style.overflow = '';
@@ -128,9 +139,9 @@ const Navbar = () => {
           >
             Ressourcen
           </Link>
-          <div className="flex flex-col space-y-4 w-full pt-6 border-t border-gray-200">
-            <Link to="/sign-in" className="text-lg font-medium py-3 px-6 w-full text-center rounded-lg hover:bg-gray-100">Anmelden</Link>
-            <Link to="/post-job" className="bg-pulse-500 hover:bg-pulse-600 text-white text-lg font-medium py-3 px-6 w-full text-center rounded-lg">Job Inserieren</Link>
+          <div className="flex flex-col space-y-3 w-full pt-4 border-t border-border/20">
+            <Link to="/sign-in" className="text-sm font-medium py-2 px-4 w-full text-center rounded-lg hover:bg-muted/50 transition-colors">Anmelden</Link>
+            <Link to="/post-job" className="bg-pulse-500 hover:bg-pulse-600 text-white text-sm font-medium py-2 px-4 w-full text-center rounded-lg transition-colors">Job Inserieren</Link>
           </div>
         </nav>
       </div>

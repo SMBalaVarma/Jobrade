@@ -114,6 +114,45 @@
   .section-subtitle {
     font-size: 1rem !important;
   }
+  
+  /* Ensure text doesn't overflow */
+  h1, h2, h3, h4, h5, h6 {
+    word-wrap: break-word;
+    hyphens: auto;
+  }
+  
+  /* Better input field handling */
+  input, textarea, select {
+    font-size: 16px !important; /* Prevents iOS zoom */
+    -webkit-appearance: none;
+    border-radius: 8px !important;
+  }
+  
+  /* Card spacing adjustments */
+  .feature-card, .job-card, .company-card {
+    margin-bottom: 1rem;
+  }
+}
+
+/* Tablet optimizations */
+@media (min-width: 641px) and (max-width: 1024px) {
+  .section-container {
+    padding: 2rem 1.5rem;
+  }
+  
+  /* Adjust grid layouts for tablets */
+  .grid-responsive {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  /* Better text sizing for tablets */
+  .section-title {
+    font-size: 2.25rem !important;
+  }
+  
+  .section-subtitle {
+    font-size: 1.125rem !important;
+  }
 }
 
 /* Robot Showcase Section */
@@ -154,13 +193,7 @@
   
   /* Optimize spacing in card layouts */
   .card, .feature-card {
-    padding: 1.25rem;
-  }
-  
-  /* Better form inputs on mobile */
-  input, textarea, select {
-    font-size: 16px !important; /* Prevents iOS zoom on focus */
-    padding: 0.75rem !important;
+    padding: 1rem;
   }
   
   /* Fix for mobile overflow issues */
@@ -171,6 +204,45 @@
   /* Make rounded corners more subtle on mobile */
   .rounded-3xl {
     border-radius: 1rem !important;
+  }
+  
+  /* Improve mobile layout spacing */
+  .mobile-spacing {
+    margin-bottom: 1rem;
+  }
+  
+  /* Better mobile grid handling */
+  .grid-mobile-1 {
+    grid-template-columns: 1fr !important;
+  }
+  
+  .grid-mobile-2 {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+  
+  /* Mobile text truncation */
+  .mobile-truncate {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+  
+  /* Mobile-friendly images */
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+}
+
+/* Ultra-wide screen optimizations */
+@media (min-width: 1920px) {
+  .container {
+    max-width: 1600px;
+  }
+  
+  .section-container {
+    max-width: 1400px;
+    margin: 0 auto;
   }
 }
 

@@ -27,6 +27,7 @@ import {
 import techInnovatorsLogo from "/assets/logos/tech-innovators-logo.webp";
 import digitalSolutionsLogo from "/assets/logos/digital-solutions-logo.webp";
 import creativeMindsLogo from "/assets/logos/creative-minds-logo.webp";
+import jobsData from '../../public/data/jobs.json';
 
 const JobDetail = () => {
   const { jobId } = useParams();
@@ -34,21 +35,15 @@ const JobDetail = () => {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    // Fetch job data from JSON file
-    const fetchJobData = async () => {
-      try {
-        const response = await fetch('/src/data/jobs.json');
-        const data = await response.json();
-        const foundJob = data.jobs.find(j => j.id.toString() === jobId);
-        setJob(foundJob);
-      } catch (error) {
-        console.error('Error fetching job data:', error);
-      } finally {
-        setLoading(false);
-      }
-    };
-
-    fetchJobData();
+    // Find job data from imported JSON
+    try {
+      const foundJob = jobsData.jobs.find(j => j.id.toString() === jobId);
+      setJob(foundJob);
+    } catch (error) {
+      console.error('Error finding job data:', error);
+    } finally {
+      setLoading(false);
+    }
   }, [jobId]);
 
   if (loading) {
@@ -162,7 +157,7 @@ const JobDetail = () => {
       <Navbar />
 
       {/* Job Header */}
-      <div className="bg-card border-b shadow-sm">
+      <div className="bg-card border-b shadow-sm mt-20">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-12">
           <div className="max-w-5xl mx-auto">
             <div className="flex items-start gap-6 mb-8">
