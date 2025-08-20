@@ -1,0 +1,404 @@
+[
+  {
+    "id": "techcorp",
+    "name": "TechCorp",
+    "logo": "/src/assets/logos/techcorp-logo.webp",
+    "description": "Führendes Technologieunternehmen mit Fokus auf Innovation und modernste Lösungen für die digitale Zukunft.",
+    "rating": 4.8,
+    "employees": "10,000+",
+    "location": "Berlin, Deutschland",
+    "openJobs": 45,
+    "founded": 2015,
+    "industry": "Information Technology & Services",
+    "website": "https://techcorp.de",
+    "email": "careers@techcorp.de",
+    "phone": "+49 30 12345678",
+    "benefits": [
+      "Remote Work",
+      "Flexible Arbeitszeiten",
+      "Aktienoptionen",
+      "Weiterbildungsbudget",
+      "Krankenversicherung",
+      "Betriebsrente"
+    ],
+    "about": "TechCorp ist ein führendes Technologieunternehmen, das sich auf die Entwicklung innovativer Software-Lösungen spezialisiert hat. Unser Ziel ist es, Unternehmen dabei zu helfen, ihre digitale Transformation erfolgreich zu meistern. Mit über 10.000 Mitarbeitern weltweit sind wir stolz darauf, ein Arbeitsumfeld zu schaffen, das Kreativität, Innovation und persönliches Wachstum fördert.",
+    "jobs": [
+      {
+        "title": "Senior Software Engineer",
+        "location": "Berlin, Deutschland",
+        "type": "Full-time",
+        "link": "/job/senior-software-engineer-techcorp"
+      },
+      {
+        "title": "UX/UI Designer",
+        "location": "Berlin, Deutschland",
+        "type": "Full-time",
+        "link": "/job/ux-ui-designer-techcorp"
+      },
+      {
+        "title": "Data Scientist",
+        "location": "Berlin, Deutschland",
+        "type": "Full-time",
+        "link": "/job/data-scientist-techcorp"
+      },
+      {
+        "title": "DevOps Engineer",
+        "location": "Berlin, Deutschland",
+        "type": "Full-time",
+        "link": "/job/devops-engineer-techcorp"
+      }
+    ],
+    "reviews": [
+      {
+        "name": "Emily Carter",
+        "avatar": "https://images.unsplash.com/photo-1494790108755-2616b612b786?w=150&h=150&fit=crop&crop=face",
+        "rating": 5,
+        "date": "vor 1 Monat",
+        "comment": "Großartiges Unternehmen zum Arbeiten! Die Kultur ist sehr unterstützend und die Arbeit ist herausfordernd und lohnend. Ich habe viel gelernt und mich beruflich weiterentwickelt."
+      },
+      {
+        "name": "David Lee",
+        "avatar": "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=150&h=150&fit=crop&crop=face",
+        "rating": 4,
+        "date": "vor 2 Monaten",
+        "comment": "Guter Arbeitsplatz mit freundlicher Atmosphäre. Die Projekte sind interessant und das Team ist kollaborativ. Es gibt Verbesserungsmöglichkeiten bei der Work-Life-Balance."
+      }
+    ],
+    "gallery": [
+      "https://images.unsplash.com/photo-1497366216548-37526070297c?w=500&h=500&fit=crop",
+      "https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=500&h=500&fit=crop",
+      "https://images.unsplash.com/photo-1556761175-b413da4baf72?w=500&h=500&fit=crop",
+      "https://images.unsplash.com/photo-1551836022-deb4988cc6c0?w=500&h=500&fit=crop"
+    ]
+  },
+  {
+    "id": "innovateco",
+    "name": "InnovateCo",
+    "logo": "/src/assets/logos/innovateco-logo.webp",
+    "description": "Schnell wachsendes Startup, das die Art revolutioniert, wie Menschen arbeiten und zusammenarbeiten.",
+    "rating": 4.6,
+    "employees": "500-1000",
+    "location": "München, Deutschland",
+    "openJobs": 23,
+    "founded": 2018,
+    "industry": "Software & Technology",
+    "website": "https://innovateco.de",
+    "email": "jobs@innovateco.de",
+    "phone": "+49 89 87654321",
+    "benefits": [
+      "Flexible Arbeitszeiten",
+      "Weiterbildungsbudget",
+      "Krankenversicherung",
+      "Remote Work",
+      "Startup-Atmosphäre",
+      "Equity-Programm"
+    ],
+    "about": "InnovateCo ist ein dynamisches Startup, das innovative Lösungen für die moderne Arbeitswelt entwickelt. Wir glauben daran, dass Technologie Menschen dabei helfen kann, produktiver und glücklicher zu arbeiten. Unser Team besteht aus leidenschaftlichen Entwicklern, Designern und Visionären, die gemeinsam an der Zukunft der Arbeit arbeiten.",
+    "jobs": [
+      {
+        "title": "Frontend Developer",
+        "location": "München, Deutschland",
+        "type": "Full-time",
+        "link": "/job/frontend-developer-innovateco"
+      },
+      {
+        "title": "Product Manager",
+        "location": "München, Deutschland",
+        "type": "Full-time",
+        "link": "/job/product-manager-innovateco"
+      },
+      {
+        "title": "Backend Engineer",
+        "location": "München, Deutschland",
+        "type": "Full-time",
+        "link": "/job/backend-engineer-innovateco"
+      }
+    ],
+    "reviews": [
+      {
+        "name": "Sarah Miller",
+        "avatar": "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=150&h=150&fit=crop&crop=face",
+        "rating": 5,
+        "date": "vor 3 Wochen",
+        "comment": "Fantastische Startup-Atmosphäre! Das Team ist unglaublich talentiert und unterstützend. Die Möglichkeiten zum Lernen und Wachsen sind endlos."
+      },
+      {
+        "name": "Michael Schmidt",
+        "avatar": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150&h=150&fit=crop&crop=face",
+        "rating": 4,
+        "date": "vor 1 Monat",
+        "comment": "Innovatives Umfeld mit viel Raum für Kreativität. Die Work-Life-Balance ist ausgezeichnet und die Projekte sind sehr spannend."
+      }
+    ],
+    "gallery": [
+      "https://images.unsplash.com/photo-1497366811353-6870744d04b2?w=500&h=500&fit=crop",
+      "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=500&h=500&fit=crop",
+      "https://images.unsplash.com/photo-1559136555-9303baea8ebd?w=500&h=500&fit=crop",
+      "https://images.unsplash.com/photo-1557804506-669a67965ba0?w=500&h=500&fit=crop"
+    ]
+  },
+  {
+    "id": "designstudio",
+    "name": "DesignStudio",
+    "logo": "/src/assets/logos/designstudio-logo.webp",
+    "description": "Kreativagentur spezialisiert auf digitale Erlebnisse und innovatives Markendesign.",
+    "rating": 4.7,
+    "employees": "50-100",
+    "location": "Hamburg, Deutschland",
+    "openJobs": 12,
+    "founded": 2016,
+    "industry": "Design & Creative Services",
+    "website": "https://designstudio.de",
+    "email": "careers@designstudio.de",
+    "phone": "+49 40 11223344",
+    "benefits": [
+      "Kreative Freiheit",
+      "Remote First",
+      "Unbegrenzter Urlaub",
+      "Design-Tools Budget",
+      "Flexible Arbeitszeiten",
+      "Team Events"
+    ],
+    "about": "DesignStudio ist eine preisgekrönte Kreativagentur, die sich auf die Entwicklung außergewöhnlicher digitaler Erlebnisse spezialisiert hat. Wir arbeiten mit Marken zusammen, um ihre Geschichte auf innovative und ansprechende Weise zu erzählen. Unser Team aus talentierten Designern, Entwicklern und Strategen schafft Lösungen, die nicht nur schön aussehen, sondern auch funktionieren.",
+    "jobs": [
+      {
+        "title": "Graphic Designer",
+        "location": "Hamburg, Deutschland",
+        "type": "Full-time",
+        "link": "/job/graphic-designer-designstudio"
+      },
+      {
+        "title": "Creative Director",
+        "location": "Hamburg, Deutschland",
+        "type": "Full-time",
+        "link": "/job/creative-director-designstudio"
+      },
+      {
+        "title": "UI/UX Designer",
+        "location": "Hamburg, Deutschland",
+        "type": "Full-time",
+        "link": "/job/ui-ux-designer-designstudio"
+      }
+    ],
+    "reviews": [
+      {
+        "name": "Anna Weber",
+        "avatar": "https://images.unsplash.com/photo-1544725176-7c40e5a71c5e?w=150&h=150&fit=crop&crop=face",
+        "rating": 5,
+        "date": "vor 2 Wochen",
+        "comment": "Ein Traum für jeden Kreativen! Die Freiheit, innovative Projekte zu entwickeln, und das unterstützende Team machen diesen Ort zu etwas Besonderem."
+      },
+      {
+        "name": "Tom Johnson",
+        "avatar": "https://images.unsplash.com/photo-1566492031773-4f4e44671d66?w=150&h=150&fit=crop&crop=face",
+        "rating": 4,
+        "date": "vor 1 Monat",
+        "comment": "Großartige Arbeitskultur und spannende Kundenprojekte. Das Remote-First-Konzept funktioniert perfekt und gibt viel Flexibilität."
+      }
+    ],
+    "gallery": [
+      "https://images.unsplash.com/photo-1558655146-d09347e92766?w=500&h=500&fit=crop",
+      "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=500&h=500&fit=crop",
+      "https://images.unsplash.com/photo-1582750433449-648ed127bb54?w=500&h=500&fit=crop",
+      "https://images.unsplash.com/photo-1560472354-b33ff0c44a43?w=500&h=500&fit=crop"
+    ]
+  },
+  {
+    "id": "dataflow",
+    "name": "DataFlow",
+    "logo": "/src/assets/logos/dataflow-logo.webp",
+    "description": "Datenanalyseplattform, die Unternehmen bei intelligenten, datengesteuerten Entscheidungen hilft.",
+    "rating": 4.9,
+    "employees": "200-500",
+    "location": "Frankfurt, Deutschland",
+    "openJobs": 18,
+    "founded": 2017,
+    "industry": "Data Analytics & AI",
+    "website": "https://dataflow.de",
+    "email": "careers@dataflow.de",
+    "phone": "+49 69 55667788",
+    "benefits": [
+      "Work-Life-Balance",
+      "Wachstumsmöglichkeiten",
+      "Wettbewerbsfähiges Gehalt",
+      "Moderne Tech-Stack",
+      "Lernbudget",
+      "Gesundheitsvorsorge"
+    ],
+    "about": "DataFlow ist ein führender Anbieter von Datenanalyse-Lösungen, der Unternehmen dabei hilft, aus ihren Daten wertvolle Erkenntnisse zu gewinnen. Unsere fortschrittliche Plattform kombiniert maschinelles Lernen mit benutzerfreundlichen Interfaces, um komplexe Datenanalysen für jeden zugänglich zu machen. Wir sind stolz darauf, ein diverser und inklusiver Arbeitsplatz zu sein, der Innovation und kontinuierliches Lernen fördert.",
+    "jobs": [
+      {
+        "title": "Data Engineer",
+        "location": "Frankfurt, Deutschland",
+        "type": "Full-time",
+        "link": "/job/data-engineer-dataflow"
+      },
+      {
+        "title": "Machine Learning Engineer",
+        "location": "Frankfurt, Deutschland",
+        "type": "Full-time",
+        "link": "/job/ml-engineer-dataflow"
+      },
+      {
+        "title": "Business Intelligence Analyst",
+        "location": "Frankfurt, Deutschland",
+        "type": "Full-time",
+        "link": "/job/bi-analyst-dataflow"
+      }
+    ],
+    "reviews": [
+      {
+        "name": "Lisa Chen",
+        "avatar": "https://images.unsplash.com/photo-1520813792240-56fc4a3765a7?w=150&h=150&fit=crop&crop=face",
+        "rating": 5,
+        "date": "vor 1 Woche",
+        "comment": "Fantastische Möglichkeiten, mit modernsten Technologien zu arbeiten. Das Team ist unglaublich kompetent und die Work-Life-Balance ist perfekt."
+      },
+      {
+        "name": "Robert Kim",
+        "avatar": "https://images.unsplash.com/photo-1519345182560-3f2917c472ef?w=150&h=150&fit=crop&crop=face",
+        "rating": 5,
+        "date": "vor 3 Wochen",
+        "comment": "DataFlow ist der beste Ort, um als Data Scientist zu arbeiten. Die Projekte sind herausfordernd und das Lernumfeld ist erstklassig."
+      }
+    ],
+    "gallery": [
+      "https://images.unsplash.com/photo-1551434678-e076c223a692?w=500&h=500&fit=crop",
+      "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=500&h=500&fit=crop",
+      "https://images.unsplash.com/photo-1504384308090-c894fdcc538d?w=500&h=500&fit=crop",
+      "https://images.unsplash.com/photo-1553877522-43269d4ea984?w=500&h=500&fit=crop"
+    ]
+  },
+  {
+    "id": "growthlabs",
+    "name": "GrowthLabs",
+    "logo": "/src/assets/logos/growthlabs-logo.webp",
+    "description": "Marketing-Technologieunternehmen mit Fokus auf nachhaltiges Unternehmenswachstum.",
+    "rating": 4.5,
+    "employees": "100-200",
+    "location": "Köln, Deutschland",
+    "openJobs": 15,
+    "founded": 2019,
+    "industry": "Marketing Technology",
+    "website": "https://growthlabs.de",
+    "email": "jobs@growthlabs.de",
+    "phone": "+49 221 99887766",
+    "benefits": [
+      "Berufliche Entwicklung",
+      "Team Events",
+      "Flexibler Urlaub",
+      "Marketing-Tools Zugang",
+      "Remote Work",
+      "Mentoring-Programme"
+    ],
+    "about": "GrowthLabs ist ein innovatives Marketing-Technologieunternehmen, das Unternehmen dabei hilft, nachhaltiges Wachstum zu erzielen. Wir entwickeln datengesteuerte Marketing-Strategien und Tools, die echte Ergebnisse liefern. Unser Team aus Marketing-Experten, Datenanalysten und Technologen arbeitet eng zusammen, um Lösungen zu schaffen, die unseren Kunden zum Erfolg verhelfen.",
+    "jobs": [
+      {
+        "title": "Digital Marketing Manager",
+        "location": "Köln, Deutschland",
+        "type": "Full-time",
+        "link": "/job/digital-marketing-manager-growthlabs"
+      },
+      {
+        "title": "Growth Hacker",
+        "location": "Köln, Deutschland",
+        "type": "Full-time",
+        "link": "/job/growth-hacker-growthlabs"
+      },
+      {
+        "title": "Content Strategist",
+        "location": "Köln, Deutschland",
+        "type": "Full-time",
+        "link": "/job/content-strategist-growthlabs"
+      }
+    ],
+    "reviews": [
+      {
+        "name": "Julia Müller",
+        "avatar": "https://images.unsplash.com/photo-1531123897727-8f129e1688ce?w=150&h=150&fit=crop&crop=face",
+        "rating": 4,
+        "date": "vor 2 Wochen",
+        "comment": "Dynamisches Umfeld mit vielen Möglichkeiten zum Wachsen. Das Marketing-Team ist sehr kollaborativ und die Projekte sind abwechslungsreich."
+      },
+      {
+        "name": "Alex Braun",
+        "avatar": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=150&h=150&fit=crop&crop=face",
+        "rating": 5,
+        "date": "vor 1 Monat",
+        "comment": "Tolle Lernmöglichkeiten und ein Team, das wirklich zusammenarbeitet. Die Work-Life-Balance und die Flexibilität sind ausgezeichnet."
+      }
+    ],
+    "gallery": [
+      "https://images.unsplash.com/photo-1557804506-669a67965ba0?w=500&h=500&fit=crop",
+      "https://images.unsplash.com/photo-1552664730-d307ca884978?w=500&h=500&fit=crop",
+      "https://images.unsplash.com/photo-1515378791036-0648a814c963?w=500&h=500&fit=crop",
+      "https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?w=500&h=500&fit=crop"
+    ]
+  },
+  {
+    "id": "cloudtech",
+    "name": "CloudTech",
+    "logo": "/src/assets/logos/cloudtech-logo.webp",
+    "description": "Cloud-Infrastrukturanbieter für Unternehmenskunden weltweit mit modernsten Lösungen.",
+    "rating": 4.8,
+    "employees": "1000-5000",
+    "location": "Stuttgart, Deutschland",
+    "openJobs": 34,
+    "founded": 2014,
+    "industry": "Cloud Infrastructure",
+    "website": "https://cloudtech.de",
+    "email": "careers@cloudtech.de",
+    "phone": "+49 711 44556677",
+    "benefits": [
+      "Aktienpaket",
+      "Remote Work",
+      "Lernen & Entwicklung",
+      "Cloud-Zertifizierungen",
+      "Internationale Projekte",
+      "Sabbatical-Programme"
+    ],
+    "about": "CloudTech ist ein führender Anbieter von Cloud-Infrastrukturen und -Services für Unternehmen weltweit. Wir helfen Organisationen dabei, ihre IT-Infrastruktur zu modernisieren und von den Vorteilen der Cloud zu profitieren. Mit unseren hochmodernen Rechenzentren und innovativen Services ermöglichen wir es unseren Kunden, agiler, effizienter und kostengünstiger zu arbeiten.",
+    "jobs": [
+      {
+        "title": "Cloud Architect",
+        "location": "Stuttgart, Deutschland",
+        "type": "Full-time",
+        "link": "/job/cloud-architect-cloudtech"
+      },
+      {
+        "title": "DevOps Engineer",
+        "location": "Stuttgart, Deutschland",
+        "type": "Full-time",
+        "link": "/job/devops-engineer-cloudtech"
+      },
+      {
+        "title": "Site Reliability Engineer",
+        "location": "Stuttgart, Deutschland",
+        "type": "Full-time",
+        "link": "/job/sre-cloudtech"
+      }
+    ],
+    "reviews": [
+      {
+        "name": "Marco Rossi",
+        "avatar": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150&h=150&fit=crop&crop=face",
+        "rating": 5,
+        "date": "vor 1 Woche",
+        "comment": "Ausgezeichnete Möglichkeiten, mit modernsten Cloud-Technologien zu arbeiten. Das internationale Team und die spannenden Projekte machen die Arbeit sehr erfüllend."
+      },
+      {
+        "name": "Nina Petersen",
+        "avatar": "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=150&h=150&fit=crop&crop=face",
+        "rating": 4,
+        "date": "vor 2 Wochen",
+        "comment": "Tolle Arbeitskultur und sehr gute Benefits. Die Möglichkeit, remote zu arbeiten und trotzdem Teil eines starken Teams zu sein, ist fantastisch."
+      }
+    ],
+    "gallery": [
+      "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=500&h=500&fit=crop",
+      "https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=500&h=500&fit=crop",
+      "https://images.unsplash.com/photo-1518432031352-d6fc5c10da5a?w=500&h=500&fit=crop",
+      "https://images.unsplash.com/photo-1573164713988-8665fc963095?w=500&h=500&fit=crop"
+    ]
+  }
+]
