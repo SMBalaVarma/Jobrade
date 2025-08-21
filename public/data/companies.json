@@ -2,7 +2,7 @@
   {
     "id": "techcorp",
     "name": "TechCorp",
-    "logo": "/src/assets/logos/techcorp-logo.webp",
+    "logo": "/assets/logos/techcorp-logo.webp",
     "description": "Führendes Technologieunternehmen mit Fokus auf Innovation und modernste Lösungen für die digitale Zukunft.",
     "rating": 4.8,
     "employees": "10,000+",
@@ -74,7 +74,7 @@
   {
     "id": "innovateco",
     "name": "InnovateCo",
-    "logo": "/src/assets/logos/innovateco-logo.webp",
+    "logo": "/assets/logos/innovateco-logo.webp",
     "description": "Schnell wachsendes Startup, das die Art revolutioniert, wie Menschen arbeiten und zusammenarbeiten.",
     "rating": 4.6,
     "employees": "500-1000",
@@ -140,7 +140,7 @@
   {
     "id": "designstudio",
     "name": "DesignStudio",
-    "logo": "/src/assets/logos/designstudio-logo.webp",
+    "logo": "/assets/logos/designstudio-logo.webp",
     "description": "Kreativagentur spezialisiert auf digitale Erlebnisse und innovatives Markendesign.",
     "rating": 4.7,
     "employees": "50-100",
@@ -206,7 +206,7 @@
   {
     "id": "dataflow",
     "name": "DataFlow",
-    "logo": "/src/assets/logos/dataflow-logo.webp",
+    "logo": "/assets/logos/dataflow-logo.webp",
     "description": "Datenanalyseplattform, die Unternehmen bei intelligenten, datengesteuerten Entscheidungen hilft.",
     "rating": 4.9,
     "employees": "200-500",
@@ -272,7 +272,7 @@
   {
     "id": "growthlabs",
     "name": "GrowthLabs",
-    "logo": "/src/assets/logos/growthlabs-logo.webp",
+    "logo": "/assets/logos/growthlabs-logo.webp",
     "description": "Marketing-Technologieunternehmen mit Fokus auf nachhaltiges Unternehmenswachstum.",
     "rating": 4.5,
     "employees": "100-200",
@@ -338,7 +338,7 @@
   {
     "id": "cloudtech",
     "name": "CloudTech",
-    "logo": "/src/assets/logos/cloudtech-logo.webp",
+    "logo": "/assets/logos/cloudtech-logo.webp",
     "description": "Cloud-Infrastrukturanbieter für Unternehmenskunden weltweit mit modernsten Lösungen.",
     "rating": 4.8,
     "employees": "1000-5000",
